@@ -162,6 +162,7 @@ section:first-child p {
 .reveal pre {
 	margin: 1em 0;
 	font-style: normal;
+	width: 100%;
 }
 
 .reveal code {
