@@ -27,7 +27,7 @@ body {
 }
 
 .reveal section {
-	background: url("../../images/vieldrin.png") no-repeat bottom right;
+	background: url("../../images/vieldrin_small.png") no-repeat bottom right;
 }
 
 .reveal section p {
@@ -36,7 +36,7 @@ body {
 
 section:first-child h1 {
 	text-transform: uppercase;
-	font-size: 3em;
+	font-size: 2em;
 	margin-bottom: 0;
 	text-align: center;
 	margin-top: 20px;
@@ -44,7 +44,7 @@ section:first-child h1 {
 
 section:first-child h2 {
 	text-transform: uppercase;
-	font-size: 2.7em;
+	font-size: 1.7em;
 	text-align: center;
 	background-color: #dd1166;
 	color: #fff;
