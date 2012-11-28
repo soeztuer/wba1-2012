@@ -31,7 +31,7 @@ body {
 }
 
 .reveal section p {
-	font-weight: bold;
+	font-size: 0.8em;
 }
 
 section:first-child h1 {
@@ -74,11 +74,13 @@ section:first-child p {
 	text-align: left;
 }
 
-.reveal h1 { font-size: 2.0em; }
-.reveal h2 { font-size: 2em;	}
-.reveal h3 { font-size: 1.55em;	}
-.reveal h4 { font-size: 1em;	}
-.reveal h2 { padding-top: 30px; }
+
+.reveal h1 { 				font-size: 1.5em; }
+.reveal h2 { 				font-size: 1.5em;	}
+.reveal h3 { 				font-size: 1.2em; color: #dd1166;	}
+.reveal h3.subline { 		margin-top: -1em;	}
+.reveal h4 { 				font-size: 1em;	}
+.reveal h2 {				padding-top: 30px; }
 
 /*********************************************
  * LINKS
@@ -109,6 +111,20 @@ section:first-child p {
 /*********************************************
  * MISC
  *********************************************/
+ 
+ .reveal .slides strong{
+ 	color: #dd1166;
+ }
+ 
+.reveal .slides h1 strong, 
+.reveal .slides h2 strong,
+.reveal .slides h3 strong{
+ 	color: #fff;
+ }
+ 
+ .reveal .slides .pink{
+ 	color: #dd1166;
+ }
 
 .reveal .slides {
 	text-align: left;
@@ -119,7 +135,7 @@ section:first-child p {
 }
 
 .reveal p, .reveal ul li, .reveal ol li {
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 	line-height: 1.3em;
 }
 .reveal q {
@@ -134,8 +150,8 @@ section:first-child p {
 	}
 
 .reveal blockquote {
-	background-color: #c1c1c1;
-	color: #343434;
+	background-color: #dd1166;
+	color: #fff;
 	padding: 30px;
 	border-radius: 5px;
 	position: relative;
@@ -153,7 +169,7 @@ section:first-child p {
 		height: 0;
 		border-left: 20px solid transparent;
 		border-right: 20px solid transparent;
-		border-top: 20px solid #c1c1c1;
+		border-top: 20px solid #dd1166;
 		position: absolute;
 		left: 30px;
 		bottom: -20px;
