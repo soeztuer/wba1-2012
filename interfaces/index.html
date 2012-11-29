@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Interfaces</title>
+
+		<meta name="description" content="Lesson on Interfaces">
+		<meta name="author" content="Oliver van der Buerie">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+		
+		<!-- Own styles for text decoration -->
+		<style type="text/css">
+
+		</style>
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Interfaces</h1>
+					<p>&nbsp;</p><br />
+					<center><small>Oliver van der B&uuml;rie</small></center>
+					<center><small>Derya &Ouml;zg&uuml;l</small></center>
+				</section>
+				<section>
+					<h2>Topics</h2>
+					<ul>
+						<li class="fragment">HTTP
+							<ul>
+								<li class="fragment">sync</li>
+								<li class="fragment">async</li>
+							</ul>
+						</li>
+						<li class="fragment">JSON</li>
+						<li class="fragment">REST</li>
+						<li class="fragment">SOAP</li>
+						<li class="fragment">XML</li>
+						<li class="fragment">Preview</li>
+					</ul>
+				</section>
+				<section>
+					<h2>HTTP</h2>
+					<p class="fragment"><span class="pink">H</span>yper<span class="pink">T</span>ext <span class="pink">T</span>ransfer <span class="pink">P</span>rotokoll</p>
+					<p>&nbsp;</p>
+					<ul>
+						<li class="fragment">GET</li>
+						<li class="fragment">POST</li>
+						<li class="fragment">HEAD</li>
+						<li class="fragment">Statuscodes</li>
+					</ul>
+				</section>
+				<section>
+					<h2>JSON</h2>
+					<p class="fragment">
+						<span class="pink">J</span>ava
+						<span class="pink">S</span>cript&nbsp;
+						<span class="pink">O</span>bject&nbsp;
+						<span class="pink">N</span>otation
+					</p>
+				</section>
+				<section>
+					<h2>REST</h2>
+					<p class="fragment">
+						<span class="pink">Re</span>presentational&nbsp;
+						<span class="pink">S</span>tate&nbsp;
+						<span class="pink">T</span>ransfer
+					</p>
+				</section>
+				<section>
+					<h2>SOAP</h2>
+					<p class="fragment">
+						<span class="pink">S</span>imple&nbsp;
+						<span class="pink">O</span>bject&nbsp;
+						<span class="pink">A</span>ccess&nbsp;
+						<span class="pink">P</span>rotokoll
+					</p>
+				</section>
+				<section>
+					<h2>XML</h2>
+					<p class="fragment">
+						<span class="pink">X</span>tensible&nbsp;
+						<span class="pink">M</span>arkup&nbsp;
+						<span class="pink">L</span>anguage&nbsp;
+					</p>
+				</section>
+				<section>
+					<h2>Ausblick</h2>
+					<p class="fragment">
+						Stateful Web Services <small><small>http://www.google.com/patents/US20080104520</small></small><br>
+						Servlets<br>
+						Parallel AJAX
+					</p>
+				</section>
+				<section>
+				</section>
+				<section>
+				</section>
+				<section>
+				</section>
+				<section>
+				</section>
+				<section>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../revealjs-template/lib/js/head.min.js"></script>
+		<script src="../revealjs-template/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [          { src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+          { src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+          { src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+          { src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+        ]
+			});
+
+		</script>
+
+	</body>
+</html>
