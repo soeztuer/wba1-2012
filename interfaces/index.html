@@ -20,7 +20,11 @@
 		
 		<!-- Own styles for text decoration -->
 		<style type="text/css">
-
+			.home{
+				position:fixed;
+				top:10px;
+				left:10px;
+			}
 		</style>
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
@@ -33,12 +37,12 @@
 	</head>
 
 	<body>
-
+		
 		<div class="reveal">
-
+			
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-
+			
 				<section>
 					<h1>Interfaces</h1>
 					<p>&nbsp;</p><br />
@@ -48,83 +52,238 @@
 				<section>
 					<h2>Topics</h2>
 					<ul>
-						<li class="fragment">HTTP
+						<li class="fragment"><a href="#/2">HTTP</a>
 							<ul>
 								<li class="fragment">sync</li>
 								<li class="fragment">async</li>
 							</ul>
 						</li>
-						<li class="fragment">JSON</li>
-						<li class="fragment">REST</li>
-						<li class="fragment">SOAP</li>
-						<li class="fragment">XML</li>
-						<li class="fragment">Preview</li>
+						<li class="fragment"><a href="#/3">JSON</a></li>
+						<li class="fragment"><a href="#/4">REST</a></li>
+						<li class="fragment"><a href="#/5">SOAP</a></li>
+						<li class="fragment"><a href="#/6">XML</a></li>
+						<li class="fragment"><a href="#/7">Preview</a></li>
 					</ul>
 				</section>
 				<section>
 					<h2>HTTP</h2>
-					<p class="fragment"><span class="pink">H</span>yper<span class="pink">T</span>ext <span class="pink">T</span>ransfer <span class="pink">P</span>rotokoll</p>
-					<p>&nbsp;</p>
-					<ul>
-						<li class="fragment">GET</li>
-						<li class="fragment">POST</li>
-						<li class="fragment">HEAD</li>
-						<li class="fragment">Statuscodes</li>
-					</ul>
+					<section>
+						
+						<p class="fragment"><span class="pink">H</span>yper<span class="pink">T</span>ext <span class="pink">T</span>ransfer <span class="pink">P</span>rotokoll</p>
+						<p>&nbsp;</p>
+						<ul>
+                                                    <li class="fragment">Connection Types</li>
+                                                    <li class="fragment">Requests</li>
+                                                    <li class="fragment">GET</li>
+                                                    <li class="fragment">POST</li>
+                                                    <li class="fragment">HEAD</li>
+                                                    <li class="fragment">Statuscodes</li>
+						</ul>
+					</section>
+                                        <section>
+                                            <h4><a href="#/2">Connection Types</a></h4>
+                                            <span class="pink fragment">Stateless</span>
+                                            <p class="fragment">Unter einer "Stateless" Verbindung versteht man, dass eine Verbindung zu einem Server nur f&uuml;r eine Aufgabe aufgebaut, und danach
+                                            sofort wieder beendet wird.
+                                            </p>
+                                            <span class="pink fragment">Stateful</span>
+                                            <p class="fragment">Unter einer Stateful Verbindung versteht man, dass eine Verbindung zum Server st&auml;ndig aufrecht erhalten wird, sodass der Server
+                                            den Client ebenfalls erreichen kann.</p>
+                                        </section>
+					<section>
+                                            <h4><a href="#/2">Requests</a></h4>
+                                            
+                                            <pre class="fragment">
+                                                <code contenteditable>
+// Beispiel JavaScript 
+
+var client = new XMLHttpRequest();
+client.open('GET','preis.php', false);
+client.onreadystatechange = function(){
+    if (client.readyState == 4){
+        console.log(client.responseText);
+}};
+client.send(null);
+                                                </code>
+                                            </pre>
+                                            <small><small>IE &#60; 7 au&szlig;en vor gelassen!</small></small>
+                                                
+					</section>
+					<section>
+						<h4><a href="#/2">GET</a></h4>
+						<ul>
+						<li class="fragment">Vorteile
+						<ul>
+							<li class="fragment">bliblablub</li>
+						</ul>
+                                                    </li>
+						<li class="fragment">Nachteile
+						<ul>
+							<li class="fragment">maximale L&auml;nge, Sichtbarkeit in Addressleiste</li>
+						</ul>
+                                                    </li>
+						</ul>
+					</section>
+                                        <section>
+                                            <h4><a href="#/2">GET</a></h4>
+                                            <p>Beispiel</p>
+                                            <pre>
+                                                <code contenteditable>
+$.get(blub);
+                                                </code>
+                                            </pre>
+                                        </section>
+                                        <section>
+                                            <h4><a href="#/2">GET</a></h4>
+                                            Response
+                                        </section>
+					<section>
+                                            <h4><a href="#/2">POST</a></h4>
+					</section>
+					<section>
+                                            <h4><a href="#/2">HEAD</a></h4>
+					</section>
+					<section>
+						<h4><a href="#/2">Status Codes</a></h4>
+                                                <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                </ul>
+					</section>
+					<section>
+                                            <br>
+						Further Requests comming soon
+					</section>
 				</section>
 				<section>
 					<h2>JSON</h2>
-					<p class="fragment">
-						<span class="pink">J</span>ava
-						<span class="pink">S</span>cript&nbsp;
-						<span class="pink">O</span>bject&nbsp;
-						<span class="pink">N</span>otation
-					</p>
+					<section>
+						<p class="fragment">
+							<span class="pink">J</span>ava
+							<span class="pink">S</span>cript&nbsp;
+							<span class="pink">O</span>bject&nbsp;
+							<span class="pink">N</span>otation
+						</p>
+					</section>
+					<section>
+                                            <h4><a href="#/3">Object in JS</a></h4>
+					</section>
+					<section>
+                                            <h4><a href="#/3">Typisierung</a></h4>
+					</section>
+					<section>
+                                            <h4><a href="#/3">Validit&auml;t</a></h4>
+					</section>
+					<section>
+                                            <h4><a href="#/3">Erstellen JSON</a></h4>
+					</section>
 				</section>
 				<section>
 					<h2>REST</h2>
-					<p class="fragment">
-						<span class="pink">Re</span>presentational&nbsp;
-						<span class="pink">S</span>tate&nbsp;
-						<span class="pink">T</span>ransfer
-					</p>
+					<section>
+						<p class="fragment">
+							<span class="pink">Re</span>presentational&nbsp;
+							<span class="pink">S</span>tate&nbsp;
+							<span class="pink">T</span>ransfer
+						</p>
+					</section>
+					<section>
+					Meaning
+					</section>
+					<section>
+					get/post
+					</section>
+					<section>
+					Response
+					</section>
 				</section>
 				<section>
 					<h2>SOAP</h2>
-					<p class="fragment">
-						<span class="pink">S</span>imple&nbsp;
-						<span class="pink">O</span>bject&nbsp;
-						<span class="pink">A</span>ccess&nbsp;
-						<span class="pink">P</span>rotokoll
-					</p>
+					<section>
+						<p class="fragment">
+							<span class="pink">S</span>imple&nbsp;
+							<span class="pink">O</span>bject&nbsp;
+							<span class="pink">A</span>ccess&nbsp;
+							<span class="pink">P</span>rotokoll
+						</p>
+					</section>
+					<section>
+					Syntax
+					</section>
+					<section>
+					Envelope
+					</section>
+					<section>
+					Access
+					</section>
 				</section>
 				<section>
 					<h2>XML</h2>
-					<p class="fragment">
-						<span class="pink">X</span>tensible&nbsp;
-						<span class="pink">M</span>arkup&nbsp;
-						<span class="pink">L</span>anguage&nbsp;
-					</p>
+					<section>
+						<p class="fragment">
+							<span class="pink">X</span>tensible&nbsp;
+							<span class="pink">M</span>arkup&nbsp;
+							<span class="pink">L</span>anguage&nbsp;
+						</p>
+					</section>
+					<section>
+					Beschreibung / History / SGML
+					</section>
+					<section>
+					Aufbau
+					</section>
+					<section>
+					Datum
+					</section>
+					<section>
+					Content
+					</section>
+					<section>
+					Style / XLS
+					</section>
 				</section>
 				<section>
 					<h2>Ausblick</h2>
-					<p class="fragment">
-						Stateful Web Services <small><small>http://www.google.com/patents/US20080104520</small></small><br>
-						Servlets<br>
-						Parallel AJAX
-					</p>
+					<section>
+						<p class="fragment">
+							Stateful Web Services <small><small>http://www.google.com/patents/US20080104520</small></small><br>
+                                                        Bidirectional Web Services <br>
+							Servlets / JSP<br>
+							Parallel AJAX
+						</p>
+						</section>
+                                                <section>
+                                                Was meint stateful Web Services?
+                                                </section>
+						<section>
+						Was meint Bidirectional Webservices?<br>
+                                                websockets<br>
+                                                rfc 6455
+						</section>
+						<section>
+						Was sind Servlets / JSP?
+						</section>
+						<section>
+						Was meint Paralleles Ajax?
+						</section>
 				</section>
 				<section>
-				</section>
-				<section>
-				</section>
-				<section>
-				</section>
-				<section>
-				</section>
-				<section>
-				</section>
+					<section>
+					Thank You for the Musik....
 
+					</section>
+				</section>
+				
+				<div class="home">
+					<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+						<a xlink:href="#">
+							<circle cx="20" cy="20" r="20" stroke="black" stroke-width="2" fill="#77CC00" style="opacity:0.7"/>
+							<polygon points="5,20,30,10,30,30" style="fill:#DD1166" />
+						</a>
+					</svg>
+				</div>
 			</div>
 
 		</div>
@@ -136,7 +295,8 @@
 
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
+			var lp = "../revealjs-template/";
+                        Reveal.initialize({
 				controls: true,
 				progress: true,
 				history: true,
@@ -146,13 +306,13 @@
 				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
 
 				// Optional libraries used to extend on reveal.js
-				dependencies: [          { src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
-          { src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
-          { src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
-          { src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+				dependencies: [{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+          { src: lp+'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: lp+'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: lp+'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: lp+'plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+          { src: lp+'socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+          { src: lp+'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
         ]
 			});
 
