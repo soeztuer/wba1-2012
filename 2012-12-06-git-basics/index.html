@@ -162,7 +162,16 @@ $ git push
 				<section>
 					<h1>Demo (Konflikte)</h1>
 					<pre><code>
-$ TODO
+alice $ vim demo.txt
+alice $ git -am "Alice commit"
+alice $ git push
+
+bob $ vim demo.txt
+bob $ git -am "Bobs commit"
+bob $ git pull                  # KONFLIKT
+bob $ vim demo.txt              # KONFLIKT manuell lösen
+bob $ git -am "Solved!"
+bob $ git push
 					</code></pre>
 				</section>
 			</div>
