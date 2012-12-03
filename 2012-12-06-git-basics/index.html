@@ -1,184 +1,202 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
+	<head>
+		<meta charset="utf-8">
 
-    <title>WBA1 - Git Basics</title>
+		<title>WBA1 - Git Basics</title>
 
-    <meta name="description" content="Git Basics">
-    <meta name="author" content="Dominik Schilling, Christoph Jerolimov">
+		<meta name="description" content="Git Basics">
+		<meta name="author" content="Dominik Schilling, Christoph Jerolimov">
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <link rel="stylesheet" href="../revealjs-template/css/reveal.css">
-    <link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+		<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
 
-    <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
 
-    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
-    <script>
-      document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-    </script>
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
 
-    <!--[if lt IE 9]>
-    <script src="../revealjs-template/lib/js/html5shiv.js"></script>
-    <![endif]-->
-  </head>
+		<!--[if lt IE 9]>
+		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
 
-  <body>
+	<body>
 
-    <div class="reveal">
+		<div class="reveal">
 
-      <!-- Any section element inside of this container is displayed as a slide -->
-      <div class="slides">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
 
-        <section>
-          <h1>WBA1 - Git Basics</h1>
-          <h2>Medieninformatik</h2>
-          <p>6. Dezember 2012</p>
-          <p>
-            Studiengang Medieninformatik an der Fachhochschule Köln<br/>
-            Campus Gummersbach
-          </p>
-          <p>
-            Dominik Schilling
-            <a href="https://github.com/ocean90">github</a>
-            <a href="https://twitter.com/ocean90">@ocean90</a><br />
-            Christoph Jerolimov
-            <a href="https://github.com/jerolimov">github</a>
-            <a href="https://twitter.com/jerolimov">@jerolimov</a><br />
-          </p>
-        </section>
+				<section>
+					<h1>WBA1 - Git Basics</h1>
+					<h2>Medieninformatik</h2>
+					<p>6. Dezember 2012</p>
+					<p>
+						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
+						Campus Gummersbach
+					</p>
+					<p>
+						Dominik Schilling
+						<a href="https://github.com/ocean90">github</a>
+						<a href="https://twitter.com/ocean90">@ocean90</a><br />
+						Christoph Jerolimov
+						<a href="https://github.com/jerolimov">github</a>
+						<a href="https://twitter.com/jerolimov">@jerolimov</a><br />
+					</p>
+				</section>
 
-          <section>
-              <h1>Warum Git? Was ist GitHub?</h1>
-              <ul>
-                  <li class="fragment">Versionierung</li>
-                  <li class="fragment">Dezentral</li>
-                  <li class="fragment">GitHub als zentrale Autorität</li>
-              </ul>
-          </section>
+				<section>
+					<h1>Warum Git? Was ist GitHub?</h1>
+					<ul>
+						<li class="fragment">Versionierung</li>
+						<li class="fragment">Dezentral</li>
+						<li class="fragment">GitHub als zentrale Autorität</li>
+					</ul>
+				</section>
 
-          <section>
-              <h1>Setup</h1>
-          </section>
+				<section>
+					<h1>Git Set Up</h1>
 
-          <section>
-              <h1>Grundsätzliche Begriffe / Befehle</h1>
-              <ul>
-                  <li class="fragment">init</li>
-                  <li class="fragment">clone</li>
-                  <li class="fragment">status</li>
-                  <li class="fragment">add</li>
-                  <li class="fragment">commit</li>
-                  <li class="fragment">pull</li>
-                  <li class="fragment">push</li>
-              </ul>
-          </section>
+					<h3>Name definieren</h3>
+					<pre>
+						<code contenteditable="">
+$ git config --global user.name "Name"
+						</code>
+					</pre>
+				</section>
 
-          <section>
-              <h1>Branch</h1>
-              <ul>
-                  <li>Lokale Entwicklung</li>
-                  <li>Committen</li>
-                  <li>Pushen</li>
-                  <li>
-                      <a href="https://github.com/fh-koeln/wba1-2012/wiki/Konventionen">WBA1 Namenskonvention</a> beachten
+				<section>
+					<h1>Git Set Up</h1>
 
-                  </li>
-              </ul>
-          </section>
+					<h3>Email definieren</h3>
+					<pre>
+						<code contenteditable="">
+$ git config --global user.email "E-Mail Adresse"
+						</code>
+					</pre>
 
-          <section>
-              <h1>Demo (branching)</h1>
-              <pre><code>
+					<p>E-Mail gleich der E-Mail Adresse bei GitHub!</p>
+				</section>
+
+				<section>
+					<h1>Grundsätzliche Begriffe / Befehle</h1>
+					<ul>
+						<li class="fragment">init</li>
+						<li class="fragment">clone</li>
+						<li class="fragment">status</li>
+						<li class="fragment">add</li>
+						<li class="fragment">commit</li>
+						<li class="fragment">pull</li>
+						<li class="fragment">push</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Branch</h1>
+					<ul>
+						<li>Lokale Entwicklung</li>
+						<li>Committen</li>
+						<li>Pushen</li>
+						<li>
+							<a href="https://github.com/fh-koeln/wba1-2012/wiki/Konventionen">WBA1 Namenskonvention</a> beachten
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Demo (branching)</h1>
+					<pre><code>
 $ git branch git-basics
 $ git checkout git-basics
 $ ...
 $ git checkout master
 $ git checkout git-basics
 $ ...
-              </code></pre>
-              <pre><code>
+					</code></pre>
+					<pre><code>
 $ cp -r yyyy-mm-dd-lehreinheit/ 2012-12-06-git-basics/
 $ git add .
 $ git commit -m "Neuer Branch für Git basics"
 $ git push origin git-basics
-              </code></pre>
+					</code></pre>
 
-              Branches auf GitHub:
-              <a href="https://github.com/fh-koeln/wba1-2012">master</a>
-              <a href="https://github.com/fh-koeln/wba1-2012/tree/git-basics">git-basics</a>
-          </section>
+					Branches auf GitHub:
+					<a href="https://github.com/fh-koeln/wba1-2012">master</a>
+					<a href="https://github.com/fh-koeln/wba1-2012/tree/git-basics">git-basics</a>
+				</section>
 
-          <section>
-              <h1>Merging</h1>
-              <ul>
-                  <li>Master in den Branch aktualisieren</li>
-                  <li>Pull request?</li>
-              </ul>
-          </section>
+				<section>
+					<h1>Merging</h1>
+					<ul>
+						<li>Master in den Branch aktualisieren</li>
+						<li>Pull request?</li>
+					</ul>
+				</section>
 
-          <section>
-              <h1>Demo (merging)</h1>
-              <pre><code>
-                  $ git branch
-                  $ git checkout master
-                  $ git merge git-basics
-                  $ git push
-              </code></pre>
-          </section>
+				<section>
+					<h1>Demo (merging)</h1>
+					<pre><code>
+$ git branch
+$ git checkout master
+$ git merge git-basics
+$ git push
+					</code></pre>
+				</section>
 
-          <section>
-              <h1>Konflikte</h1>
-              <ul>
-                  <li>Wann passieren sie</li>
-                  <li>Was ist zu tun?</li>
-              </ul>
-          </section>
+				<section>
+					<h1>Konflikte</h1>
+					<ul>
+						<li>Wann passieren sie</li>
+						<li>Was ist zu tun?</li>
+					</ul>
+				</section>
 
-          <section>
-              <h1>Demo (Konflikte)</h1>
-              <pre><code>
-                  $ TODO
-              </code></pre>
-          </section>
+				<section>
+					<h1>Demo (Konflikte)</h1>
+					<pre><code>
+$ TODO
+					</code></pre>
+				</section>
+			</div>
 
-      </div>
+		</div>
 
-    </div>
+		<script src="../revealjs-template/lib/js/head.min.js"></script>
+		<script src="../revealjs-template/js/reveal.min.js"></script>
 
-    <script src="../revealjs-template/lib/js/head.min.js"></script>
-    <script src="../revealjs-template/js/reveal.min.js"></script>
+		<script>
 
-    <script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
 
-      // Full list of configuration options available here:
-      // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
 
-        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+				]
+			});
 
-        // Optional libraries used to extend on reveal.js
-        dependencies: [
-          { src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
-          { src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
-          { src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
-          { src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
-        ]
-      });
+		</script>
 
-    </script>
-
-  </body>
+	</body>
 </html>
