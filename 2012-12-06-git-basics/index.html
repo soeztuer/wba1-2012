@@ -78,6 +78,9 @@ $ git config --global user.name "Name"
 $ git config --global user.email "E-Mail Adresse"
 					</code></pre>
 
+                    <p>TODO DS https/ssh/ssh key</p>
+                    <p>TODO DS screenshots</p>
+
 					<p>E-Mail gleich der E-Mail Adresse bei <a href="https://github.com/fh-koeln/wba1-2012/commits/master">GitHub</a>!</p>
 				</section>
 
@@ -95,14 +98,19 @@ $ git config --global user.email "E-Mail Adresse"
 				</section>
 
                 <section>
-                    <h1>Demo (Clonen und Commiten)</h1>
+                    <h1>Demo (Grundlagen)</h1>
 					<pre><code>
 $ git clone git@github.com:fh-koeln/wba1-2012.git
 $ cd wba1-2012
-$ ...
+
+# Änderungen durchführen
+$ vim demo.txt
 $ git add .
-$ git commit -m "Neuer Branch für Git basics"
-$ <strike>git push</strike>
+$ git commit -m "Änderung an der Demo"
+
+# Änderungen veröffentlich bzw. aktualisieren:
+$ git push
+$ git pull
                     </code></pre>
                 </section>
 
