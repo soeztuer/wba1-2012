@@ -58,65 +58,76 @@
 					<ul>
 						<li class="fragment">Versionierung</li>
 						<li class="fragment">Dezentral</li>
-						<li class="fragment">GitHub als zentrale Autorität</li>
+                        <li class="fragment">GitHub als zentrale Autorität</li>
+                        <li class="fragment">GitHub bietet zudem
+                            <ul>
+                                <li>Kommentare</li>
+                                <li>Issues</li>
+                                <li>Wikis</li>
+                                <li>...</li>
+                            </ul>
 					</ul>
 				</section>
 
 				<section>
 					<h1>Git Set Up</h1>
 
-					<h3>Name definieren</h3>
-					<pre>
-						<code contenteditable="">
+					<h3>Name und E-Mail-Adresse festlegen</h3>
+					<pre><code contenteditable="">
 $ git config --global user.name "Name"
-						</code>
-					</pre>
-				</section>
-
-				<section>
-					<h1>Git Set Up</h1>
-
-					<h3>Email definieren</h3>
-					<pre>
-						<code contenteditable="">
 $ git config --global user.email "E-Mail Adresse"
-						</code>
-					</pre>
+					</code></pre>
 
-					<p>E-Mail gleich der E-Mail Adresse bei GitHub!</p>
+					<p>E-Mail gleich der E-Mail Adresse bei <a href="https://github.com/fh-koeln/wba1-2012/commits/master">GitHub</a>!</p>
 				</section>
 
 				<section>
 					<h1>Grundsätzliche Begriffe / Befehle</h1>
 					<ul>
-						<li class="fragment">init</li>
-						<li class="fragment">clone</li>
-						<li class="fragment">status</li>
-						<li class="fragment">add</li>
-						<li class="fragment">commit</li>
-						<li class="fragment">pull</li>
-						<li class="fragment">push</li>
+						<li class="fragment"><span class="pink">init</span> &rarr; Eigenes unabhängiges lokales Repository erstellen</li>
+						<li class="fragment"><span class="pink">clone</span> &rarr; Verknüfte kopie eines remote Repositries erstellen</li>
+						<li class="fragment"><span class="pink">status</span> &rarr; Übersicht lokaler Änderungen anzeigen</li>
+    					<li class="fragment"><span class="pink">add</span> &rarr; Änderungen zum Übernehmen markieren</li>
+                        <li class="fragment"><span class="pink">commit</span> &rarr; Änderungen dauerhaft mit Log-Eintrag übernehmen</li>
+                        <li class="fragment"><span class="pink">pull</span> &rarr; Änderungen an remote Repository senden</li>
+						<li class="fragment"><span class="pink">push</span> &rarr; Lokales Repository aktuallisieren</li>
 					</ul>
 				</section>
 
+                <section>
+                    <h1>Demo (Clonen und Commiten)</h1>
+					<pre><code>
+$ git clone git@github.com:fh-koeln/wba1-2012.git
+$ cd wba1-2012
+$ ...
+$ git add .
+$ git commit -m "Neuer Branch für Git basics"
+$ <strike>git push</strike>
+                    </code></pre>
+                </section>
+
 				<section>
-					<h1>Branch</h1>
+					<h1>Branchen</h1>
 					<ul>
-						<li>Lokale Entwicklung</li>
-						<li>Committen</li>
-						<li>Pushen</li>
-						<li>
-							<a href="https://github.com/fh-koeln/wba1-2012/wiki/Konventionen">WBA1 Namenskonvention</a> beachten
+                        <li class="fragment"><span class="pink">Problem:</span> Master ist keine Spielwiese</li>
+                        <li class="fragment"><span class="pink">Lösung:</span> Eigener, temporärer „Entwicklungszweig“</li>
+						<li class="fragment" style="list-style: none;">&rarr; Lokale und unabhängig</li>
+                        <li class="fragment" style="list-style: none;">&rarr; Pushen optional</li>
+						<li class="fragment" style="list-style: none;">
+							&rarr; <a href="https://github.com/fh-koeln/wba1-2012/wiki/Konventionen">WBA1 Namenskonvention</a> beachten
 						</li>
 					</ul>
 				</section>
 
 				<section>
-					<h1>Demo (branching)</h1>
+					<h1>Demo (branchen)</h1>
 					<pre><code>
+# Branch erstellen:
 $ git branch git-basics
 $ git checkout git-basics
 $ ...
+
+# Branch verwenden:
 $ git checkout master
 $ git checkout git-basics
 $ ...
@@ -128,24 +139,37 @@ $ git commit -m "Neuer Branch für Git basics"
 $ git push origin git-basics
 					</code></pre>
 
-					Branches auf GitHub:
-					<a href="https://github.com/fh-koeln/wba1-2012">master</a>
-					<a href="https://github.com/fh-koeln/wba1-2012/tree/git-basics">git-basics</a>
+					<small>
+                        Branches auf GitHub:
+					    <a href="https://github.com/fh-koeln/wba1-2012">master</a>
+				    	<a href="https://github.com/fh-koeln/wba1-2012/tree/git-basics">git-basics</a>
+                    </small>
 				</section>
 
 				<section>
-					<h1>Merging</h1>
+					<h1>Mergen</h1>
+                    <p>
+                        Ergebnisse zusammenführen:
+                    </p>
 					<ul>
-						<li>Master in den Branch aktualisieren</li>
-						<li>Pull request?</li>
+                        <li class="fragment">Beim <span class="pink">parallelem Arbeiten</span> (gleicher Branch)</li>
+                        <li class="fragment"><span class="pink">Ergebnisse veröffentlichen</span> (eigener Branch &rarr; master)</li>
+						<li class="fragment"><span class="pink">Branch aktualisieren</span> (master &rarr; eigenen Branch)</li>
+						<li class="fragment"><span class="pink">Pull requests</span></li>
 					</ul>
 				</section>
 
 				<section>
-					<h1>Demo (merging)</h1>
+					<h1>Demo (mergen)</h1>
 					<pre><code>
+# Automatisch beim parallelem Arbeiten
+
+# Branches hin- und her mergen, hier git-basics -> master
 $ git branch
-$ git checkout master
+* master
+  git-basics
+
+# Implizierter Commit!
 $ git merge git-basics
 $ git push
 					</code></pre>
@@ -154,8 +178,10 @@ $ git push
 				<section>
 					<h1>Konflikte</h1>
 					<ul>
-						<li>Wann passieren sie</li>
-						<li>Was ist zu tun?</li>
+						<li class="fragment">Wann passieren sie?</li>
+                        <li class="fragment" style="list-style: none;">&rarr; bei <span class="pink">git pull</span></li>
+                        <li class="fragment" style="list-style: none;">&rarr; bei <span class="pink">git merge</span></li>
+                        <li class="fragment">Wenn Änderungen die nicht automatisch mergebar sind.</li>
 					</ul>
 				</section>
 
@@ -163,17 +189,33 @@ $ git push
 					<h1>Demo (Konflikte)</h1>
 					<pre><code>
 alice $ vim demo.txt
-alice $ git -am "Alice commit"
+alice $ git commit -am "Alice commit"
 alice $ git push
 
 bob $ vim demo.txt
-bob $ git -am "Bobs commit"
+bob $ git commit -am "Bobs commit"
 bob $ git pull                  # KONFLIKT
 bob $ vim demo.txt              # KONFLIKT manuell lösen
-bob $ git -am "Solved!"
+bob $ git commit -am "Solved!"
 bob $ git push
 					</code></pre>
 				</section>
+
+                <section>
+                    <h1>GitHub Pages</h1>
+                    <p>
+                        TODO
+                    </p>
+                </section>
+
+                <section>
+                    <h1>Vielen Dank</h1>
+                    <p>
+                        TODO slides link<br/>
+                        TODO evtl. weiterführeunde Links<br/>
+                        Dokumentation folgt
+                    </p>
+                </section>
 			</div>
 
 		</div>
