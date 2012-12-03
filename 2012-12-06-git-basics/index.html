@@ -67,14 +67,15 @@
           </section>
 
           <section>
-              <h1>Grundsätzliche Begriffe</h1>
+              <h1>Grundsätzliche Begriffe / Befehle</h1>
               <ul>
-                  <li>Clone</li>
-                  <li>Pull</li>
-                  <li>Status</li>
-                  <li>Add</li>
-                  <li>Commit</li>
-                  <li>Push</li>
+                  <li class="fragment">init</li>
+                  <li class="fragment">clone</li>
+                  <li class="fragment">status</li>
+                  <li class="fragment">add</li>
+                  <li class="fragment">commit</li>
+                  <li class="fragment">pull</li>
+                  <li class="fragment">push</li>
               </ul>
           </section>
 
@@ -84,7 +85,10 @@
                   <li>Lokale Entwicklung</li>
                   <li>Committen</li>
                   <li>Pushen</li>
-                  <li>Warum und wie wir das benutzen?</li>
+                  <li>
+                      <a href="https://github.com/fh-koeln/wba1-2012/wiki/Konventionen">WBA1 Namenskonvention</a> beachten
+
+                  </li>
               </ul>
           </section>
 
@@ -93,12 +97,21 @@
               <pre><code>
 $ git branch git-basics
 $ git checkout git-basics
+$ ...
+$ git checkout master
+$ git checkout git-basics
+$ ...
+              </code></pre>
+              <pre><code>
 $ cp -r yyyy-mm-dd-lehreinheit/ 2012-12-06-git-basics/
 $ git add .
 $ git commit -m "Neuer Branch für Git basics"
 $ git push origin git-basics
               </code></pre>
-              <a href="https://github.com/fh-koeln/wba1-2012">GitHub</a>
+
+              Branches auf GitHub:
+              <a href="https://github.com/fh-koeln/wba1-2012">master</a>
+              <a href="https://github.com/fh-koeln/wba1-2012/tree/git-basics">git-basics</a>
           </section>
 
           <section>
@@ -113,13 +126,10 @@ $ git push origin git-basics
               <h1>Demo (merging)</h1>
               <pre><code>
                   $ git branch
-                  $ git checkout git-basics
-                  $ cp -r yyyy-mm-dd-lehreinheit/ 2012-12-06-git-basics/
-                  $ git add .
-                  $ git commit -m "Neuer Branch für Git basics"
-                  $ git push origin git-basics
+                  $ git checkout master
+                  $ git merge git-basics
+                  $ git push
               </code></pre>
-              <a href="https://github.com/fh-koeln/wba1-2012">GitHub</a>
           </section>
 
           <section>
@@ -130,6 +140,12 @@ $ git push origin git-basics
               </ul>
           </section>
 
+          <section>
+              <h1>Demo (Konflikte)</h1>
+              <pre><code>
+                  $ TODO
+              </code></pre>
+          </section>
 
       </div>
 
