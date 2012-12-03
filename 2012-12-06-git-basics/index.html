@@ -135,7 +135,7 @@ $ git branch git-basics
 $ git checkout git-basics
 $ ...
 
-# Branch verwenden:
+# Branch wechseln:
 $ git checkout master
 $ git checkout git-basics
 $ ...
@@ -157,7 +157,10 @@ $ git push origin git-basics
 				<section>
 					<h1>Mergen</h1>
                     <p>
-                        Ergebnisse zusammenführen:
+                        Immer wenn Ergebnisse zusammengeführt werden.
+                    </p>
+                    <p class="fragment">
+                        Passiert im Idealfall automatisch. :-)
                     </p>
 					<ul>
                         <li class="fragment">Beim <span class="pink">parallelem Arbeiten</span> (gleicher Branch)</li>
@@ -170,15 +173,20 @@ $ git push origin git-basics
 				<section>
 					<h1>Demo (mergen)</h1>
 					<pre><code>
-# Automatisch beim parallelem Arbeiten
+$ git pull                      # Implizierter Commit bei merges!
 
 # Branches hin- und her mergen, hier git-basics -> master
 $ git branch
 * master
   git-basics
 
-# Implizierter Commit!
-$ git merge git-basics
+$ git merge git-basics          # Implizierter Commit bei merges!
+$ git push
+
+# Geht auch umgekehrt:
+$ git checkout git-basics
+$ git pull                      # Implizierter Commit bei merges!
+$ git merge master              # Implizierter Commit bei merges!
 $ git push
 					</code></pre>
 				</section>
