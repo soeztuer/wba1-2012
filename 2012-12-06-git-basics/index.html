@@ -58,14 +58,15 @@
 					<ul>
 						<li class="fragment">Versionierung</li>
 						<li class="fragment">Dezentral</li>
-                        <li class="fragment">GitHub als zentrale Autorität</li>
-                        <li class="fragment">GitHub bietet zudem
-                            <ul>
-                                <li>Kommentare</li>
-                                <li>Issues</li>
-                                <li>Wikis</li>
-                                <li>...</li>
-                            </ul>
+						<li class="fragment">GitHub als zentrale Autorität</li>
+						<li class="fragment">GitHub bietet zudem
+							<ul>
+								<li>Kommentare</li>
+								<li>Issues</li>
+								<li>Wikis</li>
+								<li>Hosting</li>
+								<li>...</li>
+							</ul>
 					</ul>
 				</section>
 
@@ -78,8 +79,8 @@ $ git config --global user.name "Name"
 $ git config --global user.email "E-Mail Adresse"
 					</code></pre>
 
-                    <p>TODO DS https/ssh/ssh key</p>
-                    <p>TODO DS screenshots</p>
+					<p>TODO DS https/ssh/ssh key</p>
+					<p>TODO DS screenshots</p>
 
 					<p>E-Mail gleich der E-Mail Adresse bei <a href="https://github.com/fh-koeln/wba1-2012/commits/master">GitHub</a>!</p>
 				</section>
@@ -90,15 +91,15 @@ $ git config --global user.email "E-Mail Adresse"
 						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">init</span> &rarr; Unabhängiges lokales Repository erstellen</li>
 						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">clone</span> &rarr; Entferntes Repository kopieren</li>
 						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">status <span style="color: white;">&bullet;</span> diff</span> &rarr; Lokale Änderungen anzeigen</li>
-    					<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">add</span> &rarr; Änderungen zum Übernehmen markieren</li>
-                        <li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">commit</span> &rarr; Änderungen dauerhaft übernehmen</li>
-                        <li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">pull</span> &rarr; Lokales Repository aktualisieren</li>
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">add</span> &rarr; Änderungen zum Übernehmen markieren</li>
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">commit</span> &rarr; Änderungen dauerhaft übernehmen</li>
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">pull</span> &rarr; Lokales Repository aktualisieren</li>
 						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">push</span> &rarr; Änderungen an entferntes Repository senden</li>
 					</ul>
 				</section>
 
-                <section>
-                    <h1>Demo (Grundlagen)</h1>
+				<section>
+					<h1>Demo (Grundlagen)</h1>
 					<pre><code>
 $ git clone git@github.com:fh-koeln/wba1-2012.git
 $ cd wba1-2012
@@ -111,16 +112,16 @@ $ git commit -m "Änderung an der Demo"
 # Änderungen veröffentlich bzw. aktualisieren:
 $ git push
 $ git pull
-                    </code></pre>
-                </section>
+					</code></pre>
+				</section>
 
 				<section>
 					<h1>Branchen</h1>
 					<ul>
-                        <li class="fragment"><span class="pink">Problem:</span> Master ist keine Spielwiese</li>
-                        <li class="fragment"><span class="pink">Lösung:</span> Eigener, temporärer „Entwicklungszweig“</li>
+						<li class="fragment"><span class="pink">Problem:</span> Master ist keine Spielwiese</li>
+						<li class="fragment"><span class="pink">Lösung:</span> Eigener, temporärer „Entwicklungszweig“</li>
 						<li class="fragment" style="list-style: none;">&rarr; Lokal und unabhängig</li>
-                        <li class="fragment" style="list-style: none;">&rarr; Pushen prinzipell optional, aber ideal für (Sub-)Teams</li>
+						<li class="fragment" style="list-style: none;">&rarr; Pushen prinzipell optional, aber ideal für (Sub-)Teams</li>
 						<li class="fragment" style="list-style: none;">
 							&rarr; <a href="https://github.com/fh-koeln/wba1-2012/wiki/Konventionen">WBA1 Namenskonvention</a> beachten
 						</li>
@@ -152,23 +153,23 @@ $ git push origin git-basics
 					</code></pre>
 
 					<small>
-                        Branches auf GitHub:
-					    <a href="https://github.com/fh-koeln/wba1-2012">master</a>
-				    	<a href="https://github.com/fh-koeln/wba1-2012/tree/git-basics">git-basics</a>
-                    </small>
+						Branches auf GitHub:
+						<a href="https://github.com/fh-koeln/wba1-2012">master</a>
+						<a href="https://github.com/fh-koeln/wba1-2012/tree/git-basics">git-basics</a>
+					</small>
 				</section>
 
 				<section>
 					<h1>Mergen</h1>
-                    <p>
-                        Immer wenn Ergebnisse zusammengeführt werden.
-                    </p>
-                    <p class="fragment">
-                        Passiert im Idealfall automatisch. :-)
-                    </p>
+					<p>
+						Immer wenn Ergebnisse zusammengeführt werden.
+					</p>
+					<p class="fragment">
+						Passiert im Idealfall automatisch. :-)
+					</p>
 					<ul>
-                        <li class="fragment">Beim <span class="pink">parallelem Arbeiten</span> (gleicher Branch)</li>
-                        <li class="fragment"><span class="pink">Ergebnisse veröffentlichen</span> (eigener Branch &rarr; master)</li>
+						<li class="fragment">Beim <span class="pink">parallelem Arbeiten</span> (gleicher Branch)</li>
+						<li class="fragment"><span class="pink">Ergebnisse veröffentlichen</span> (eigener Branch &rarr; master)</li>
 						<li class="fragment"><span class="pink">Branch aktualisieren</span> (master &rarr; eigenen Branch)</li>
 						<li class="fragment"><span class="pink">Pull requests</span></li>
 					</ul>
@@ -199,9 +200,9 @@ $ git push
 					<h1>Konflikte</h1>
 					<ul>
 						<li class="fragment">Wann passieren sie?</li>
-                        <li class="fragment" style="list-style: none;">&rarr; bei <span class="pink">git pull</span></li>
-                        <li class="fragment" style="list-style: none;">&rarr; bei <span class="pink">git merge</span></li>
-                        <li class="fragment">Wenn Änderungen die nicht automatisch mergebar sind.</li>
+						<li class="fragment" style="list-style: none;">&rarr; bei <span class="pink">git pull</span></li>
+						<li class="fragment" style="list-style: none;">&rarr; bei <span class="pink">git merge</span></li>
+						<li class="fragment">Wenn Änderungen die nicht automatisch mergebar sind.</li>
 					</ul>
 				</section>
 
@@ -221,21 +222,43 @@ bob $ git push
 					</code></pre>
 				</section>
 
-                <section>
-                    <h1>GitHub Pages</h1>
-                    <p>
-                        TODO
-                    </p>
-                </section>
+				<section>
+					<h1>GitHub Pages</h1>
 
-                <section>
-                    <h1>Vielen Dank</h1>
-                    <p>
-                        TODO slides link<br/>
-                        TODO evtl. weiterführeunde Links<br/>
-                        Dokumentation folgt
-                    </p>
-                </section>
+					<ul>
+						<li class="fragment">Hosting für statischen Content</li>
+						<li class="fragment" style="list-style: none;">&rarr; für <span class="pink">unsere Präsentationen</span></li>
+						<li class="fragment" style="list-style: none;">&rarr; für <a href="https://fh-koeln.github.com/wba1-2012/" target="_blank">fh-koeln.github.com/wba1-2012/</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Präsentation online stellen</h1>
+
+					<ul>
+						<li class="fragment">Import der Präsentationen nur aus dem <span class="pink">Master Branch!</span></li>
+						<li class="fragment">public.json ergänzen</span></li>
+					</ul>
+					<pre class="fragment"><code contenteditable>{
+	"presentations":
+	{
+		"2012-12-06-git-basics/index.html":
+		{
+			"title" : "Git Basics",
+			"authors" : ["Dominik Schilling", "Christoph Jerolimov"]
+		}
+	}
+}</code></pre>
+				</section>
+
+				<section>
+					<h1>Vielen Dank</h1>
+					<p>
+						TODO slides link<br/>
+						TODO evtl. weiterführeunde Links<br/>
+						Dokumentation folgt
+					</p>
+				</section>
 			</div>
 
 		</div>
