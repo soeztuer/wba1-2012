@@ -22,6 +22,28 @@
 		<script>
 			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
+        <style type="text/css">
+            .kaestchen {
+                margin: 30px 0 0 30px !important;
+            }
+            .kaestchen li {
+                background-color: #DD1166;
+                color: white;
+                display: inline-bock;
+                float: left;
+                list-style-type: none;
+                margin: 0 15px 0px 0;
+                padding: 10px;
+                text-align: center;
+                width: 8em;
+                
+            }
+            
+            
+            .nobackground {
+                background-image: none !important;
+            }
+        </style>
 
 		<!--[if lt IE 9]>
 		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
@@ -39,22 +61,23 @@
 					<h1>WBA1 - Web-Basics</h1>
 					<h2>Medieninformatik</h2>
 					<p>06. Dezember 2012</p>
+					<p>
+						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
+						Campus Gummersbach
+					</p>
+					<p>
+						Prof. Christian Noss<br />
+						<a href="http://github.com/cnoss">http://github.com/cnoss</a>
+					</p>
 				</section>
-                <section>
-                    <p>
-                        <figure>
-                            <img src="images/TimBernersLee.jpg" alt="Foto von Tim Berners Lee"/>
-                            <figcaption>
-                                Tim Berners-Lee<br />
-                                <small>Quelle: <a href="http://www.edht.org.uk">http://www.edht.org.uk</a> (03.12.2012)</small>
-                            </figcaption>
-                        </figure>
-                    </p>
-                </section>
-                <section>
-                    <h2>
-                        Tim Berners-Lee - Gründer des W3C
-                    </h2>
+                <section class="nobackground">
+                    <figure>
+                        <img src="images/TimBernersLee.jpg" alt="Foto von Tim Berners Lee"/>
+                        <figcaption>
+                            Tim Berners-Lee, Gründer des <strong>W3C</strong><br /> 
+                            <small>Quelle: <a href="http://www.edht.org.uk">http://www.edht.org.uk</a> (03.12.2012)</small>
+                        </figcaption>
+                    </figure>
                 </section>
                 <section>
                     <blockquote>
@@ -84,23 +107,114 @@
                         Die <strong>drei</strong> Säulen des <strong>WWW</strong>
                     </h2>
                     <ul>
+                        <li class="fragment"><strong>URI</strong><br /><strong>U</strong>niform <strong>R</strong>esource <strong>I</strong>dentifier</li>
                         <li class="fragment"><strong>HTTP</strong><br /> <strong>H</strong>yper<strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol</li>
                         <li class="fragment"><strong>HTML</strong><br /><strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
-                        <li class="fragment"><strong>URI</strong><br /><strong>U</strong>niform <strong>R</strong>esource <strong>I</strong>dentifier</li>
                     </ul>
                 </section>
                 <section>
                     <h2>
-                        Aufbau einer URI
+                        Aufbau einer <strong>URI</strong>
                     </h2>
-                    <embed type="image/svg+xml" src="images/aufbau_url.svg" width="100%" height="100%"/>
+                    <p class="fragment" style="font-size: 23px; margin-bottom: 0px">
+                        http://hans:geheim@example.org:80/demo/example.cgi?land=de&stadt=aa#geschichte
+                    </p>
+                        <embed class="fragment" type="image/svg+xml" src="images/aufbau_url_bezeichnungen.svg"/>
+                </section>
+                <section>
+                    <embed type="image/svg+xml" src="images/client_server.svg"/>
+                    <embed class="fragment" style="position: absolute; top: 220px; left: 0px;" type="image/svg+xml" src="images/request.svg"/>
+                    <embed class="fragment" style="position: absolute; top: 265px; right: 65px;" type="image/svg+xml" src="images/response.svg"/>
+                </section>
+                <section>
+                    <embed type="image/svg+xml" src="images/client_server_proxy.svg"/>
+                    <embed class="fragment" style="position: absolute; top: 210px; left: 170px;" type="image/svg+xml" src="images/cache.svg"/>
                 </section>
                 <section>
                     <h2>
-                        Das Web ist ein <strong>Hypertext</strong> Informationssystem
+                        HTTP-Statuscodes
+                    </h2>
+                        <p>
+                            
+                        Die Antwort- oder Statuscodes von HTTP bestimmen direkt die Bedeutung der Antwort auf eine HTTP-Anfrage. 
+                        Sie werden stets in der ersten Zeile der Response (= Server-Antwort) in der Form</p>
+                        <pre><code>HTTP/1.1 &lt;Statuscode&gt; </code></pre>
+                        <p>
+                        übermittelt, wobei der Statuscode aus einer dreistelligen Zahl und einer kurzen Beschreibung besteht. 
+                        Die Statuscodes werden nach ihrer ersten Ziffer in Gruppen von unterschiedlicher Bedeutung eingeteilt.
+                        </p>
+                        <p>
+                            <small>Quelle: <a href="http://wiki.selfhtml.org/wiki/Referenz:HTTP/Antwortcodes">http://wiki.selfhtml.org/wiki/Referenz:HTTP/Antwortcodes</a> (04.12.2012)</small>    
+                        </p>
+                </section>
+                <section>
+                    <h2>
+                        HTTP-Statuscodes
+                    </h2>
+                    <ul>
+                        <li><strong>100+ </strong>Informationen</li>
+                        <li><strong>200+ </strong>Erfolg</li>
+                        <li><strong>300+ </strong>Umleitung</li>
+                        <li><strong>400+ </strong>Fehler beim Client</li>
+                        <li><strong>500+ </strong>Fehler beim Server</li>
+                    </ul>
+
+                </section>
+                <section>
+                    <h2>
+                        MIME-Types
+                    </h2>
+                        <p>
+                            Der Internet Media Type, auch MIME-Type (<strong>M</strong>ultipurpose <strong>I</strong>nternet <strong>M</strong>ail <strong>E</strong>xtension) 
+                            oder Content-Type (nach dem Namen des Feldes), klassifiziert die Daten im Rumpf einer Nachricht im Internet. Wie im MIME-Standard erläutert, wird 
+                            z. B. bei einer HTTP-Übertragung einem Browser mitgeteilt, welche Daten der Webserver sendet                            
+                        </p>
+                        <p>
+                            <small>Quelle: <a href="http://de.wikipedia.org/wiki/Internet_Media_Type">http://de.wikipedia.org/wiki/Internet_Media_Type</a> (04.12.2012)</small>        
+                        </p>
+                </section>
+                <section>
+                    <h2>
+                        MIME-Types
+                    </h2>
+                    <ul>
+                        <li>application/pdf</li>
+                        <li>audio/mp3</li>
+                        <li>image/jpeg</li>
+                        <li>text/html</li>
+                        <li>video/mpeg</li>
+                    </ul>
+                </section>
+                <section class="nobackground">
+                    <figure>
+                        <img style="height: 90%" src="images/roussel_lesemaschine.jpg" alt="Roussels Lesemaschine" />
+                        <figcaption>Roussels Lesemaschine<br />
+                                <small>Quelle: <a href="http://www.khm.de/~flw/lexikon/25.html">http://www.khm.de/~flw/lexikon/25.html</a> (04.12.2012)</small>
+                        </figcaption>
+                    </figure>
+                </section>
+                <section class="nobackground">
+                    <figure>
+                        <img style="height: 90%" src="images/buecherrad_ramelli.jpg" alt="Buecherrad von Ramelli" />
+                        <figcaption>Buecherrad von Agostino Ramelli (16. Jahrhundert)<br />
+                                <small>Quelle: <a href="http://de.wikipedia.org/wiki/Ramellis_Bücherrad">http://de.wikipedia.org/wiki/Ramellis_Bücherrad</a> (04.12.2012)</small>
+                        </figcaption>
+                    </figure>
+                </section>
+                <section class="nobackground">
+                    <figure>
+                        <img style="height: 90%" src="images/erste_website.png" alt="Buecherrad von Ramelli" />
+                        <figcaption>Die erste Website, verfasst und veröffentlicht von Tim Berners-Lee am 13. November 1990 auf einem NeXT-Rechner<br />
+                                <small>Quelle: <a href="http://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html">http://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html</a> (04.12.2012)</small>
+                        </figcaption>
+                    </figure>
+                </section>
+                <section>
+                    <h2>
+                        Das Web ist ein <strong>Hypertext</strong>-Informationssystem
                     </h2>
                     <blockquote>
-                        Hypertext ermöglicht es Ihnen, Text und visuelle Informationen auf nicht lineare 
+                        Hypertext ermöglicht es Ihnen, Texte und visuelle Informationen auf nicht lineare 
                         Weise zu lesen und durch sie zu navigieren, indem sie das auswählen, 
                         was Sie als nächstes wissen wollen.
                     </blockquote>
@@ -108,6 +222,30 @@
                         <small>Quelle: Lemay, Laura; Tyler, Denise: HTML 4 in 21 Tagen, 1. Aufl.,  Markt+Technik, 2000, S. 15</small>
                     </p>
                 </section>
+                <section>
+                    <h2>
+                        HTML - <strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage
+                    </h2>
+                    <blockquote>
+                        Die Hypertext Markup Language (deutsch: Hypertext-Auszeichnungssprache) 
+                        ist eine textbasierte Auszeichnungssprache zur Strukturierung von Inhalten 
+                        wie Texten, Bildern und Hyperlinks in Dokumenten. HTML-Dokumente sind die Grundlage 
+                        des World Wide Web und werden von einem Webbrowser dargestellt.
+                    </blockquote>
+                    <small>Quelle: <a href="http://de.wikipedia.org/wiki/Hypertext_Markup_Language">http://de.wikipedia.org/wiki/Hypertext_Markup_Language</a> (04.12.2012)</small>
+
+                </section>
+                <section class="nobackground">
+                    <div style="text-align: center">
+                        
+                        <embed type="image/svg+xml" src="images/sgml.svg"/>
+                        <embed style="position:absolute; top: 16px; left: 285px" class="fragment" type="image/svg+xml" src="images/xml.svg"/>
+                        <embed style="margin-top:-10px" class="fragment" type="image/svg+xml" src="images/dtd.svg"/>
+                        <embed  style="margin-top:-10px" class="fragment" type="image/svg+xml" src="images/auszeichnungssprachen.svg"/>
+                    </div>
+
+                </section>
+
                 <section>
                     <h2>
                         Protokoll
@@ -139,23 +277,55 @@
                         wie Informationen in einer Datei gespeichert werden.
                     </blockquote>
                 </section>
+
                 <section>
                     <h2>
-                        Client-Server-Architektur
+                        <strong>Wer</strong> von Ihnen nutzt:
                     </h2>
-                        ToDo: Ein schönes Bild zur Client-Server-Architektur -
-                        Auch Proxy und Cache in dem zusammenhang erklären?
+                    <ul class="kaestchen">
+                        <li class="fragment">World Wide Web</li>
+                        <li class="fragment">E-Mail</li>
+                        <li class="fragment">Skype</li>
+                        <li class="fragment">Twitter</li>
+                        <li class="fragment">ICQ</li>
+                        <li class="fragment">Google</li>
+                        <li class="fragment">Facebook</li>
+                        <li class="fragment">Flickr</li>
+                        <li class="fragment">YouTube</li>
+                        <li class="fragment">Xing</li>
+                        <li class="fragment">Online Banking</li>
+                        <li class="fragment">Amazon</li>
+                    </ul>
                 </section>
                 <section>
                     <h2>
-                        Response / Request - Kommunikation über HTTP
+                        Was sind die Vor- und Nachteile von Web-basierten Anwendungen?
                     </h2>
+                    <div class="fragment" style="float: left !important; margin-right: 70px;">
+                        <h3>Vorteile</h3>
+                        <ul>
+                            <li>Aktualisierbarkeit</li>
+                            <li>Zugänglichkeit</li>
+                            <li>Kostenstruktur</li>
+                            <li>Plattformunabhängigkeit</li>
+                            <li>Frei von Redundanzen</li>
+                            <li>Personalisierbarkeit</li>
+                            <li>Weniger Medienbrüche</li>
+                            <li>Messbarkeit</li>
+                        </ul>
+                    </div>
+                    <div class="fragment">
+                        <h3>
+                            Nachteile
+                        </h3>
+                        <ul>
+                            <li>Keine Haptik</li>
+                            <li>Technisches Equipment erforderlich</li>
+                            <li>Sicherheit (gläserner User)</li>
+                            <li>Interaktivität/Geschwindgkeit</li>
+                        </ul>
+                    </div>
                 </section>
-                <section>
-                    ToDo: Ein schönes Bild zu Hypertext
-                </section>
-
-
 			</div>
 
 		</div>
