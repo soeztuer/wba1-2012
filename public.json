@@ -1,0 +1,24 @@
+{
+	"presentations":
+	{
+
+		"2012-11-29-introduction-tools/index.html":
+		{
+			"title" : "Git, Github, Presentations & Doku",
+			"authors" : ["Jan Kus"]
+		},
+
+
+		"2012-11-29-wba-1-basics/index.html":
+		{
+			"title" : "WBA1 Basics",
+			"authors" : ["Christian Noss"]
+		},
+
+		"2012-12-06-git-basics/index.html":
+		{
+			"title" : "Git Basics",
+			"authors" : ["Dominik Schilling", "Christoph Jerolimov"]
+		}
+	}
+}
