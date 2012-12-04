@@ -26,6 +26,43 @@
 		<!--[if lt IE 9]>
 		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
 		<![endif]-->
+		<style>
+		.progress {
+			z-index: 9999;
+		}
+		.fullscreen .state-background {
+			width: 100%;
+			height: 100%;
+		}
+
+		.fullscreen .reveal .slides {
+			margin: 0;
+			padding: 0;
+		 	width: 100%;
+		 	height: 100%;
+		 	max-width: 100%;
+		 	left: 0;
+		 	right: 0;
+		 	top: 0;
+		 	bottom: 0;
+		}
+
+		.fullscreen .reveal .slides > section {
+		 	position: absolute;
+		 	width: 100%;
+		 	height: 100%;
+		 	min-height: 100%;
+		 	text-align: left;
+		 	left: 0;
+		 	right: 0;
+		 	top: 0;
+		 	bottom: 0;
+		 	margin: 0;
+		 	background-position: center center;
+		 	background-repeat: no-repeat;
+		 	background-size: auto 100%;
+		}
+		</style>
 	</head>
 
 	<body>
@@ -43,13 +80,14 @@
 						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
 						Campus Gummersbach
 					</p>
-					<p>
+
+					<p style="margin-top: 100px">
 						Dominik Schilling
-						<a href="https://github.com/ocean90">github</a>
-						<a href="https://twitter.com/ocean90">@ocean90</a><br />
+						<a href="https://github.com/ocean90" target="_blank">github</a>
+						<a href="https://twitter.com/ocean90" target="_blank">@ocean90</a><br />
 						Christoph Jerolimov
-						<a href="https://github.com/jerolimov">github</a>
-						<a href="https://twitter.com/jerolimov">@jerolimov</a><br />
+						<a href="https://github.com/jerolimov" target="_blank">github</a>
+						<a href="https://twitter.com/jerolimov" target="_blank">@jerolimov</a><br />
 					</p>
 				</section>
 
@@ -98,11 +136,50 @@ $ git config --global user.name "Name"
 $ git config --global user.email "E-Mail Adresse"
 					</code></pre>
 
-					<p>TODO DS https/ssh/ssh key</p>
-					<p>TODO DS screenshots</p>
 
-					<p>E-Mail gleich der E-Mail Adresse bei <a href="https://github.com/fh-koeln/wba1-2012/commits/master">GitHub</a>!</p>
+					<p>E-Mail gleich der E-Mail Adresse bei <a href="https://github.com/fh-koeln/wba1-2012/commits/master" target="_blank">GitHub</a>!</p>
 				</section>
+
+				<section>
+					<h1><strong>1</strong> Git Set Up <strong>// GitHub for Windows</strong></h1>
+
+					<ul>
+						<li>OS X 10.7+</li>
+						<li>Generiert SSH Key automatisch</li>
+						<li><a href="http://mac.github.com/" target="_blank">mac.github.com</a></li>
+					</ul>
+				</section>
+
+				<section data-state="fullscreen" style="background-image: url(images/github-win-01-installation-login.png)">
+				</section>
+				<section data-state="fullscreen" style="background-image: url(images/github-win-02-git-commandline.png)">
+				</section>
+				<section data-state="fullscreen" style="background-image: url(images/github-win-03-change-history-view.png)">
+				</section>
+				<section data-state="fullscreen" style="background-image: url(images/github-win-04-uncommited-changes.png)">
+				</section>
+
+				<section>
+					<h1><strong>1</strong> Git Set Up <strong>// GitHub for Mac</strong></h1>
+
+					<ul>
+						<li>Windows XP, Vista, 7 & 8</li>
+						<li>Generiert SSH Key automatisch</li>
+						<li><a href="http://windows.github.com/" target="_blank">windows.github.com</a></li>
+					</ul>
+				</section>
+
+				<section data-state="fullscreen" style="background-image: url(images/github-mac-01-login.png)">
+				</section>
+				<section data-state="fullscreen" style="background-image: url(images/github-mac-02-cloning.png)">
+				</section>
+				<section data-state="fullscreen" style="background-image: url(images/github-mac-03-branches.png)">
+				</section>
+				<section data-state="fullscreen" style="background-image: url(images/github-mac-04-history.png)">
+				</section>
+				<section data-state="fullscreen" style="background-image: url(images/github-mac-05-uncommited-changes.png)">
+				</section>
+
 
 				<section>
 					<h1><strong>2</strong> Grundlagen</h1>
@@ -110,13 +187,12 @@ $ git config --global user.email "E-Mail Adresse"
 						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">init</span> &rarr; Unabhängiges lokales Repository erstellen</li>
 						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">clone</span> &rarr; Entferntes Repository kopieren</li>
 						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">status <span style="color: white;">&bullet;</span> diff</span> &rarr; Lokale Änderungen anzeigen</li>
-						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">add</span> &rarr; Änderungen zum Übernehmen markieren</li>
+						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">add <span style="color: white;">&bullet;</span> reset</span> &rarr; Änderungen zum Übernehmen (ent-)markieren</li>
 						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">commit</span> &rarr; Änderungen dauerhaft übernehmen</li>
 						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">pull</span> &rarr; Lokales Repository aktualisieren</li>
 						<li class="fragment"><span class="pink" style="display: inline-block; width: 20%;">push</span> &rarr; Änderungen an entferntes Repository senden</li>
 					</ul>
 				</section>
-
 
 				<section>
 					<h1><strong>2</strong> Grundlagen <strong>// Demo</strong></h1>
@@ -130,7 +206,7 @@ $ vim demo.txt
 $ git add .
 $ git commit -m "Änderung an der Demo"
 
-# Änderungen veröffentlich bzw. aktualisieren:
+# Änderungen veröffentlichen bzw. aktualisieren:
 $ git push
 $ git pull
 					</code></pre>
@@ -144,10 +220,10 @@ $ git pull
 						<li class="fragment" style="list-style: none;">&rarr; Lokal und unabhängig</li>
 
 						<li class="fragment" style="list-style: none;">&rarr; Pushen prinzipell optional, aber ideal für (Sub-)Teams</li>
-						<li class="fragment" style="list-style: none;">&rarr; <span style="color: #ffffff; background-color: #dd1166;">Umkehrschluss: Nicht alle branches lokal verfügbar!</span></li>
+						<li class="fragment" style="list-style: none;">&rarr; <span style="color: #ffffff; background-color: #dd1166;">Umkehrschluss: Nicht alle Branches lokal verfügbar!</span></li>
 
 						<li class="fragment" style="list-style: none;">
-							&rarr; <a href="https://github.com/fh-koeln/wba1-2012/wiki/Konventionen">WBA1 Namenskonvention</a> beachten
+							&rarr; <a href="https://github.com/fh-koeln/wba1-2012/wiki/Konventionen" target="_blank">WBA1 Namenskonvention</a> beachten
 						</li>
 					</ul>
 				</section>
@@ -163,16 +239,16 @@ $ git push origin git-basics
 # Daten kopieren oder verändern
 $ cp -r yyyy-mm-dd-lehreinheit/ 2012-12-06-git-basics/
 $ git add .
-$ git commit -m "Neuer Branch für Git basics"
+$ git commit -m "Neuer Branch für Git Basics"
 
 # Vereinfachen fürs pushen:
 $ git branch --set-upstream-to=origin/git-basics
 $ git push
 					</code></pre>
 
-					Branches auf GitHub:
-					<a href="https://github.com/fh-koeln/wba1-2012">master</a>
-					<a href="https://github.com/fh-koeln/wba1-2012/tree/git-basics">git-basics</a>
+					<a href="https://github.com/fh-koeln/wba1-2012/branches" target="_blank">Branches</a> auf GitHub:
+					<a href="https://github.com/fh-koeln/wba1-2012" target="_blank">master</a>
+					<a href="https://github.com/fh-koeln/wba1-2012/tree/git-basics" target="_blank">git-basics</a>
 				</section>
 
 				<section>
@@ -204,10 +280,10 @@ $ git branch
 					</p>
 
 					<ul>
-						<li class="fragment">Beim <span class="pink">parallelem Arbeiten</span> (gleicher Branch)</li>
-						<li class="fragment"><span class="pink">Ergebnisse veröffentlichen</span> (eigener Branch &rarr; master)</li>
-						<li class="fragment"><span class="pink">Branch aktualisieren</span> (master &rarr; eigenen Branch)</li>
-						<li class="fragment"><span class="pink">Pull requests</span> &rarr; verschiebt die Verantwortung</li>
+						<li class="fragment">Bei <span class="pink">parallelen Arbeiten</span> (gleicher Branch)</li>
+						<li class="fragment"><span class="pink">Ergebnisse veröffentlichen</span> (eigener Branch &rarr; Master)</li>
+						<li class="fragment"><span class="pink">Branch aktualisieren</span> (Master &rarr; eigener Branch)</li>
+						<li class="fragment"><span class="pink">Pull Requests</span> &rarr; verschiebt die Verantwortung</li>
 					</ul>
 				</section>
 
@@ -236,12 +312,12 @@ $ git push
 					<h1><strong>5</strong> Konflikte</h1>
 					<ul>
 						<li class="fragment">Wann treten Konflikte auf?</li>
-						<li class="fragment" style="list-style: none;">&rarr; Wenn Änderungen die nicht automatisch mergebar sind.</li>
-						<li class="fragment" style="list-style: none;">&rarr; bei <span class="pink">git pull</span></li>
-						<li class="fragment" style="list-style: none;">&rarr; bei <span class="pink">git merge</span></li>
+						<li class="fragment" style="list-style: none;">&rarr; Bei Änderungen, die nicht automatisch mergebar sind.</li>
+						<li class="fragment" style="list-style: none;">&rarr; Bei <span class="pink">git pull</span>.</li>
+						<li class="fragment" style="list-style: none;">&rarr; Bei <span class="pink">git merge</span>.</li>
 						<li class="fragment">Kann man das Risko reduzieren?</li>
-						<li class="fragment" style="list-style: none;">&rarr; häufig(er) pullen und mergen</li>
-						<li class="fragment" style="list-style: none;">&rarr; Umbauarbeiten wie formatieren zurückhalten oder absprechen</li>
+						<li class="fragment" style="list-style: none;">&rarr; Häufig(er) pullen und mergen</li>
+						<li class="fragment" style="list-style: none;">&rarr; Umbauarbeiten, wie Formatierungen, zurückhalten oder absprechen</li>
 					</ul>
 				</section>
 
@@ -292,11 +368,10 @@ bob $ git push
 
 				<section>
 					<h1>Vielen Dank</h1>
-					<p>
-						TODO slides link<br/>
-						TODO evtl. weiterführeunde Links<br/>
-						Dokumentation folgt
-					</p>
+
+					<ul>
+						<li><a href="https://github.com/fh-koeln/wba1-2012/wiki/Git-CheatSheet" target="_blank">Git CheatSheet</a></li>
+					</ul>
 				</section>
 			</div>
 
@@ -323,9 +398,9 @@ bob $ git push
 					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
-					{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
-					{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } }
+					//{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					//{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
 				]
 			});
 
