@@ -65,8 +65,16 @@ header h1 {
 /**
  * Content: Präsentationen
  */
-#praesentationen {
+#presentations {
 	margin: 50px 0;
+}
+
+.loading {
+	list-style: none;
+}
+
+.error {
+	color: #f00
 }
 
 /**
