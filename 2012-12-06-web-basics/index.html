@@ -1,306 +1,302 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>WBA1 - Git, Github, Presentations & Doku</title>
+    <title>WBA1 - Basics</title>
 
-		<meta name="description" content="Introduction to git and Github">
-		<meta name="author" content="Jan Kus">
+    <meta name="description" content="Das Wichtigste zur Veranstaltung">
+    <meta name="author" content="Christian Noss">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
-		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+    <link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+    <link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!--[if lt IE 9]>
+    <script src="../revealjs-template/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-	<body>
+  <body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
 
-				<section>
-					<h1>WBA1 - Let's talk about tools</h1>
-					<h2>Medieninformatik</h2>
-					<p>November 29th, 2012</p>
-					<p>
-						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
-						Campus Gummersbach
-					</p>
-					<p>
-						Jan Kus<br />
-						http://github.com/koos
-					</p>
-				</section>
+        <section>
+          <h1>Web-basierte Anwendungen 1</h1>
+          <h2>WWW-Technologien</h2>
+        </section>
+        
+        <section>
+			<h2>The <strong>Next</strong> Generation</h2>
+		</section>	
+		
+		<section>
+			<h2 class="pink">Ich <strong>erwarte</strong> von dieser Veranstaltung …</h2>
+			<p>
+				<ul>
+					<li class="fragment">… intensive Teilnahme</li>
+					<li class="fragment">… neue Themen</li>
+					<li class="fragment">… neue Themen & Tools</li>
+					<li class="fragment">… guten Content</li>
+					<li class="fragment">… eine Abschlussparty</li>
+				</ul>
+			</p>
+		</section>	
+        
+        <section>
+			<h2>Betreuer // <strong>Supporter</strong></h2>
+        		<li class="fragment">Martin Baljan, FH-Köln</li>
+        		<li class="fragment">B.Sc. Volker Schaefer, FH-Köln</li>
+        		<li class="fragment">M.Sc. Jan Kus, Railslove GmbH</li>
+				<li class="fragment">Prof. Christian Noss, FH-Köln</li>
+		</section>
+		
+		<section>
+			<h2>About Jan</h2>
+			<p>
+				<ul>
+					<li>M.Sc. Jan Kus</li>
+					<li>FH-Köln Medieninformatik</li>
+					<li>2003 - 2010</li>
+					<li>2008 - Bumann, Schneider, Kus GbR (<em>Railslove</em>)</li>							
+					<li>2010 - Railslove GmbH (15 Mitarbeiter)</li>														
+				</ul>
+			</p>
+			<p>
+				<i>
+				<small><a href="http://jankus.name">Homepage</a> / <a href="http://twitter.com/koos">@koos on Twitter</a> / <a href="http://railslove.com">Railslove</a> / <a href="http://facebook.com/jbvkoos">Facebook</a></small></i>
+			</p>
+			<aside class="notes">
+				Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
+			</aside>
+		</section>
+		
+		<section>
+			<h2>Eckdaten der Veranstaltung</h2>
+			<p>
+				<ul>
+					<li class="fragment">Creditpoints: 5</li>
+					<li class="fragment">Workload: 150 Stunden</li>
+					<li class="fragment">Prüfungsform: Seminar- / Projektarbeit und Klausur</li>
+					<li class="fragment">maximal erreichbare Punktzahl: 170</li>
+				</ul>
+			</p>
+		</section>	
+		
+		<section>
+			<h2>Prüfungen <strong>Teil 1</strong></h2>
+			<h3 class="subline">Seminar-/ Projektarbeit (max. 80 Punkte)</h3>
+			<p>In dieser Arbeit geht es darum in einer 2-er Gruppe eine Lerneinheit zu einem Themenpaket innerhalb des Themengebietes WBA1 zu erarbeiten, vorzustellen, zu dokumentieren und Klausurfragen abzuleiten. Das genaue Vorgehen, die Anforderungen und Bewertungskriterien finden Sie auf der Seite: Erstellung einer Lerneinheit. Die Themenpakete werden in der ersten Veranstaltung gemeinsam erarbeitet und festgelegt.</p>
+		</section>	
+		
+		<section>
+			<h2>Prüfungen <strong>Teil 2</strong></h2>
+			<h3 class="subline">Klausur (max. 80 Punkte)</h3>
+			<p>Die Klausur für Studenten der BPO3 hat eine Dauer von einer Stunde. Es können insgesamt 80 Punkte erzielt werden. Für die Vorbereitung werden 30 Stunden Workload kalkuliert.</p>
+		</section>	
+		
+		<section>
+			<h2>Einsatz <strong>1</strong></h2>
+			<h3 class="subline">Teilnahme (max. 16 Punkte)</h3>
+			<p>Die Veranstaltung ist auf Mitwirkung ausgelegt. Das funktioniert nur, wenn Sie anwesend sind. Ein Teil der Lerneinheiten wird in Live-Sessions an den WBA1-Donnerstagen angeboten. Insgesamt wird es etwa 16 Sessions geben, die von Studenten(Regelfall) oder Dozenten(Ausnahme) durchgeführt werden. Für jeden Besuch einer Session bekommt der Besucher einen Punkt gut geschrieben.</p>
+		</section>	
+		
+		<section>
+			<h2>Einsatz <strong>2</strong></h2>
+			<h3 class="subline">Wir-machen-mit-aktionen (max. 10 Punkte)</h3>
+			<blockquote>Frag nicht, was WBA1 für Dich tun kann, sondern frag, was Du für WBA1 tun kannst.</blockquote>
+			<p>Wir unterstützen Ihr Engagement in jeglicher Hinsicht und vergeben hierfür weitere 10 Punkte bei Wir-machen-mit-aktionen. Wenn Sie mit einer Aktion diese Punkte erzielen möchten, müssen Sie vorab mit uns sprechen und wir treffen eine entsprechende Vereinbarung. Eine Liste mit vereinbarten Wir-machen-mit-aktionen und Ideen, was in diesem Bereich noch gemacht werden könnte, finden Sie unter <a href="https://github.com/fh-koeln/wba1-2012/wiki/Ideen-&-Jobs-f%C3%BCr-Extrapunkte">Ideen & Jobs für Extrapunkte</a></p>
+		</section>	
+		
+		<section>
+			<h2>Kurz mal <strong>nachrechnen</strong></h2>
+			<p>
+				<ul>
+					<li class="fragment">für die 1.0 braucht man 170 Punkte</li>
+					<li class="fragment">80 gibt es maximal für die Klausur</li>
+					<li class="fragment">weitere 80 gibt es maximal für die Seminar-/ Projektarbeit</li>
+					<li class="fragment">16 Punkte für die Teilnahme bei Live Sessions</li>
+					<li class="fragment">weitere 10 Punkte für eine gute Wir-machen-mit Aktion</li>
+					<li class="fragment">macht zusammen 186 Punkte</li>
+				</ul>
+			</p>
+		</section>		
+		
+		<section>
+			<h2>Seminar-/ Projektarbeit</h2>
+			<h3 class="subline">Erarbeitung einer Lerneinheit</h3>
+			<p>Das Themenfeld "WWW-Technologien" werden wir in <strong>verschiedene Themenblöcke</strong> unterteilen und daraus <strong>Themen für Lerneinheiten</strong> generieren. <strong>Lerneinheiten werden</strong> dann, in Abstimmung mit den Betreuern, von den <strong>einzelnen Teams</strong> vorbereitet, <strong>referiert</strong> und <strong>dokumentiert</strong>. Die einzelnen <strong>Lehrteams</strong> sind damit <strong>Experten</strong> in ihrem Feld und <strong>verantwortlich</strong> dafür, dass die <strong>gesamte Gruppe</strong> die <strong>Inhalte</strong> der Lerneinheit <strong>beherrscht</strong>.</p>
+		</section>	
+		
+		<section>
+			<h2>Erarbeitung einer Lerneinheit</h2>
+			<h3 class="subline">Teams und Workload</h3>
+			<p>Die Lerneinheiten werden in <strong>2-er Teams</strong> erarbeitet. Die Teams werden von <strong>uns zusammen gestellt</strong>. Pro Teammitglied stehen für die komplette Erstellung der Lerneinheit etwa 50 Stunden Workload zu Verfügung. Für das gesamte Team stehen also <strong>100 Stunden Workload</strong>, also etwa 12 Arbeitstage zur Verfügung.</p>
+		</section>	
+		
+		<section>
+			<h2>Erarbeitung einer Lerneinheit</h2>
+			<h3 class="subline">Was umfasst eine Lerneinheit?</h3>
+			<p>
+				<ul>
+					<li class="fragment">Kurzreferat (ca. 20min)</li>
+					<li class="fragment">Training (ca. 40min)</li>
+					<li class="fragment">Dokumentation</li>
+					<li class="fragment">Klausuraufgaben</li>
+				</ul>
+			</p>
+		</section>	
 
-				<section>
-					<h2>About me</h2>
-					<p>
-						<ul>
-							<li>M.Sc. Jan Kus</li>
-							<li>FH-Köln Medieninformatik</li>
-							<li>2003 - 2010</li>
-							<li>2008 - Bumann, Schneider, Kus GbR (<em>Railslove</em>)</li>							
-							<li>2010 - Railslove GmbH (15 Mitarbeiter)</li>														
-						</ul>
-					</p>
-					<p>
-						<i>
-						<small><a href="http://jankus.name">Homepage</a> / <a href="http://twitter.com/koos">@koos on Twitter</a> / <a href="http://railslove.com">Railslove</a> / <a href="http://facebook.com/jbvkoos">Facebook</a></small></i>
-					</p>
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
-				</section>
+		<section>
+			<h2>Wie sieht ein WBA1 Donnerstag aus?</h2>
+			<p>
+				<ul>
+					<li class="fragment">Start im Plenum um 9:00 Uhr</li>
+					<li class="fragment">Live-Sessions</li>
+					<li class="fragment">Trainings</li>
+					<li class="fragment">Review Gespräche</li>
+					<li class="fragment">Arbeit an den Lerneinheiten</li>
+					<li class="fragment">Abschlussmeeting im Plenum um 17:30 Uhr</li>
+				</ul>
+			</p>
+		</section>	
+		
+		<section>
+			<h2>Wie sieht ein WBA1 Donnerstag aus?</h2>
+			<h3 class="subline">Start im Plenum um 9:00 Uhr</h3>
+			<p>
+				<ul>
+					<li class="fragment">ich erwarte, dass Sie vollzählig und pünktlich erscheinen</li>
+					<li class="fragment">Planung des Tages</li>
+					<li class="fragment">Vereinbarung der Tagesziele</li>
+				</ul>
+			</p>
+		</section>	
+		
+		<section>
+			<h2>Wie sieht ein WBA1 Donnerstag aus?</h2>
+			<h3 class="subline">Live-Sessions</h3>
+			<p>
+				<ul>
+					<li class="fragment">Einzelsessions oder Parallelsessions</li>
+					<li class="fragment">Teilnahme wird auf Laufzettel abgezeichnet</li>
+					<li class="fragment">Parallelsessions haben maximal 40 Teilnehmer</li>
+				</ul>
+			</p>
+		</section>	
+		
+		<section>
+			<h2>Wie sieht ein WBA1 Donnerstag aus?</h2>
+			<h3 class="subline">Trainings</h3>
+			<p>
+				<ul>
+					<li class="fragment">haben maximal 40 Teilnehmer</li>
+					<li class="fragment">bitte Rechner mitbringen, wenn möglich</li>
+				</ul>
+			</p>
+		</section>	
+		
+		<section>
+			<h2>Wie sieht ein WBA1 Donnerstag aus?</h2>
+			<h3 class="subline">Review Gespräche</h3>
+			<p>
+				<ul>
+					<li class="fragment">jedes Team benötigt mindestens zwei Review Termine</li>
+					<li class="fragment">Teilnahme und Themen werden auf Laufzettel abgezeichnet</li>
+				</ul>
+			</p>
+		</section>	
+		
+		<section>
+			<h2>Wie sieht ein WBA1 Donnerstag aus?</h2>
+			<h3 class="subline">Abschlussmeeting im Plenum</h3>
+			<p>
+				<ul>
+					<li class="fragment">Feedback zum Tag</li>
+					<li class="fragment">Überprüfung der Tagesziele</li>
+					<li class="fragment">Vereinbarung der Ziele bis zum nächsten WBA1 Tag</li>
+				</ul>
+			</p>
+		</section>	
+				
+		<section>
+			<h1>Fragen?</h1>
+		</section>	
+		
+		<section>
+			<h1>Ziele für heute <strong>1</strong></h1>
+			<p>
+				<ul>
+					<li class="fragment">Sondierung des Themenfeldes</li>
+					<li class="fragment">Konfektionierung von Themenblöcke für Lerneinheiten</li>
+					<li class="fragment">Alle haben einen gitHub Account</li>
+					<li class="fragment">Alle haben eine Gruppe</li>
+					<li class="fragment">Alle Gruppen haben ein Thema</li>
 
-				<section>
-					<h2>Let's talk about tools</h2>
-					<p>
-						<ul>
-							<li><a href="#/3">Git & Github (Code)</a></li>
-							<li><a href="#/4">Github Wiki & Issues (Documentation & Problems)</a></li>
-							<li><a href="#/5">Reveal.js (Presentation)</a></li>
-						</ul>
-					</p>
-				</section>				
+				</ul>
+			</p>
+		</section>	
+		
+		<section>
+			<h1>Ziele für heute <strong>2</strong></h1>
+			<p>
+				<ul>
+					<li class="fragment">Alle wissen wie die Veranstaltung funktioniert</li>
+					<li class="fragment">Alle wissen wie die notwendigen Tools funktionieren</li>
+					<li class="fragment">Alle haben einen Laufzettel</li>
+					<li class="fragment">Studentische Experten sind bekannt</li>
+				</ul>
+			</p>
+		</section>	
+		
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Git & Github</h2>
-						<p>
-							<ul>
-								<li>Git is a distributed revision control and source code management system (Subversion, Mercurial, CVS)
-									<ul>
-										<li><a href="http://git-scm.com/">http://git-scm.com</a></li>
-									</ul>
-								</li>									
-								<li>
-									Github is a SaaS platform to host code
-									<ul>
-										<li><a href="http://github.com/">http://github.com</a></li>								
-									</ul>
-								</li>
+		
+      </div>
 
-							</ul>
-						</p>
-					</section>
-					<section>
-						<h2>Git Basics</h2>
-						Clone Repositories
-						<pre><code contenteditable>> git clone git@github.com:fh-koeln/wba1-2012.git</code></pre>
-						Pull Code
-						<pre><code contenteditable>> git pull origin master</code></pre>
-						Add, Commit & Push Code
-						<pre>
-							<code contenteditable>
-> git add .
-> git commit -a -m "added fancy stuff"
-> git push origin master
-							</code>							
-						</pre>
-						Do you need more? <a href="http://rogerdudler.github.com/git-guide/index.de.html">Git Guide</a>
-					</section>
-					<section>
-						<h2>GitHub</h2>
-						<p>GitHub is a plattform to share code with friends, co-workers, classmates</p>
-						<p>Over two million users on GitHub</p>
-						<p>It's <em>the</em> plattform to share your code with people - open source or private</p>
-						</p>
-					</section>
-					<section>
-						<h2>Things to do now?</h2>
-						<ul>
-							<li>Get an account: <a href="https://github.com/signup/free">https://github.com/signup/free</a></li>
-							<li>Clone
-								<pre><code contenteditable>> git clone git@github.com:fh-koeln/wba1-2012.git</code></pre>
-							</li>
-							<li>Modify your Slides & Code</li>
-							<li>Push it back
-								<pre>
-									<code contenteditable>
-> git add .
-> git commit -a -m "added fancy stuff"
-> git push origin master
-									</code>							
-								</pre>
-							</li>
-						</ul>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2>Documentations and Issues</h2>
-						<p>
-							Put all your class documentations to the GitHub wiki: <a href="https://github.com/fh-koeln/wba1-2012/wiki">https://github.com/fh-koeln/wba1-2012/wiki</a>
-						</p>
-						<p>
-							If you have questions use GitHub issues: <a href="https://github.com/fh-koeln/wba1-2012/issues">https://github.com/fh-koeln/wba1-2012/issues</a>
-						</p>
-					</section>
-					<section>
-						<h2>Your Documentation on Github wiki</h2>
-						<p>
-							Put all your class documentations to the GitHub wiki: <a href="https://github.com/fh-koeln/wba1-2012/wiki">https://github.com/fh-koeln/wba1-2012/wiki</a>
-						</p>
-						<p>
-							The GitHub wiki speaks: Markdown, Textile, RDoc, etc.
-						</p>
-						<p>
-							But lets agree on Markdown?
-						</p>
-						<p>
-							You can get more help here: <a href="http://daringfireball.net/projects/markdown/syntax">http://daringfireball.net/projects/markdown/syntax</a>
-						</p>
-					</section>	
-					<section>
-						<h2>Github issues for questions</h2>
-						<p>
-							Just visit: <a href="https://github.com/fh-koeln/wba1-2012/issues">https://github.com/fh-koeln/wba1-2012/issues</a>
-						</p>
-						<p>
-							Submitting an issue you can <em>assign</em> it to somebody and/or add a lable to it (<em>todo, idee, enhancement, etc.</em>)
-						</p>
-					</section>									
-				</section>				
-				<section>
-					<section>
-						<h2>Presentations with Reveal.js</h2>
-						<p>
-							HTML Presentation Framework (HTML, CSS, Javascript)
-						</p>
-						<ol>
-							<li class="fragment">Transitions</li>
-							<li class="fragment">Custom Javascript Events</li>
-							<li class="fragment">Embedding Code</li>
-							<li class="fragment">Internal Linking</li>							
-							<li class="fragment">Fragmented Views</li>														
-							<li class="fragment">Exporting</li>														
-						</ol>
-					</section>
-					<section id="transitions">
-						<h2>Transition Styles</h2>
-						<p>
-							You can select from different transitions, like: <br>
-							<a href="?transition=cube#/transitions">Cube</a> -
-							<a href="?transition=page#/transitions">Page</a> -
-							<a href="?transition=concave#/transitions">Concave</a> -
-							<a href="?transition=zoom#/transitions">Zoom</a> -
-							<a href="?transition=linear#/transitions">Linear</a> -
-							<a href="?transition=none#/transitions">None</a> -
-							<a href="?#/transitions">Default</a>
-						</p>
-					</section>
-					<section data-state="customevent">
-						<h2>Custom Events</h2>
-						<p>
-							Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-						</p>
-						<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-		console.log( '"customevent" has fired' );
-	} );
-						</code></pre>
-					</section>
-					<section>
-						<h2>Pretty Code</h2>
-						<pre><code contenteditable>
-	function linkify( selector ) {
-	  if( supports3DTransforms ) {
+    </div>
 
-	    var nodes = document.querySelectorAll( selector );
+    <script src="../revealjs-template/lib/js/head.min.js"></script>
+    <script src="../revealjs-template/js/reveal.min.js"></script>
 
-	    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-	      var node = nodes[i];
+    <script>
 
-	      if( !node.className ) ) {
-	        node.className += ' roll';
-	      }
-	    };
-	  }
-	}
-						</code></pre>
-						<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-					</section>
-					<section>
-						<h2>Intergalactic Interconnections</h2>
-						<p>
-							You can link between slides internally,
-							<a href="#/2/3">like this</a>.
-						</p>
-					</section>
-					<section>
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-					</section>
-					<section>
-						<h2>Export to PDF</h2>
-						<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-						<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="306" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:0px" allowfullscreen> </iframe>
-						<script>
-							document.getElementById('slideshare').attributeName = 'allowfullscreen';
-						</script>
-					</section>
-					<section>
-						<h2>Further Information</h2>
-						<p>
-							On Github<br/>
-							<a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a>
-						</p>
-					</section>						
-				</section>
-			</div>
-		</div>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
 
-		<script src="../revealjs-template/lib/js/head.min.js"></script>
-		<script src="../revealjs-template/js/reveal.min.js"></script>
-		<script src="../revealjs-template/js/wba.js"></script>
-		<script>
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+          { src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+          { src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+          { src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+        ]
+      });
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+    </script>
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
-					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
-					{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
-					{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
-				]
-			});
-
-		</script>
-
-	</body>
+  </body>
 </html>
