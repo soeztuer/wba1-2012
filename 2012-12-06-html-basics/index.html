@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WBA1 - HTML Basics</title>
+
+		<meta name="description" content="HTML Basics">
+		<meta name="author" content="Dominik Schilling, Bruno José Carvalho Gonzaga">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../revealjs-template/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs-template/css/theme/wba.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs-template/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../revealjs-template/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs-template/lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style>
+			#headline-test h1,
+			#headline-test h2,
+			#headline-test h3,
+			#headline-test h4,
+			#headline-test h5,
+			#headline-test h6 {
+				color: #fff;
+				margin: 0;
+				padding: 10px;
+			}
+			#headline-test h1 {
+				font-size: 20px;
+			}
+			#headline-test h2 {
+				font-size: 18px;
+			}
+			#headline-test h3 {
+				font-size: 16px;
+			}
+			#headline-test h4 {
+				font-size: 14px;
+			}
+			#headline-test h5 {
+				font-size: 12px;
+			}
+			#headline-test h6 {
+				font-size: 10px;
+			}
+			pre {
+				-moz-tab-size: 4;
+				-o-tab-size:   4;
+				tab-size:      4;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>WBA1 - HTML Basics</h1>
+					<h2>Medieninformatik</h2>
+					<p>06. Dezember 2012</p>
+					<p>
+						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
+						Campus Gummersbach
+					</p>
+
+					<br/>
+					<p>
+						Dominik Schilling <a href="http://github.com/ocean90">github</a><br/>
+						Bruno José Carvalho Gonzaga <a href="http://github.com/jogabonito">github</a>
+					</p>
+				</section>
+
+				<section>
+					<h1>Aufbau der Lerneinheit <strong>HTML Basics</strong></h1>
+
+					<ul>
+						<li>Theorie</li>
+						<li>Demo mit aktiver Mitarbeit</li>
+						<li>...</li>
+						<li>Training</li>
+					</ul>
+
+					<h1 style="margin-top: 1.0em; margin-bottom: 0.5em;">Lernziele</h1>
+					<ul>
+						<li>Grundprinzip von HTML kennen</li>
+						<li>HTML anwenden können</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1><strong>1</strong> Was ist HTML?</h1>
+
+					<ul>
+						<li class="fragment"><strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</li>
+						<li class="fragment" >Markup Language</li>
+						<li class="fragment" style="color:red">keine Programmiersprache</li>
+						<li class="fragment">Historie
+							<ul>
+								<li>1990</li>
+								<li>Ursprünglich: Wissenschaftliche Dokumente online darstellen</li>
+							</ul>
+						</li>
+
+					</ul>
+				</section>
+
+				<section>
+					<h1><strong>2</strong> Aufbau von HTML Seiten</h1>
+
+					<ul>
+						<li class="fragment">Tag
+						<pre><code contenteditable>&lt;tagname> &lt;/tagname></code></pre>
+						</li>
+						<li class="fragment">Attribut
+						<pre><code contenteditable>&lt;tagname attributename="wert"></code></pre>
+						</li>
+						<li class="fragment">HTML Element
+						<pre><code contenteditable>&lt;tagname> text &lt;/tagname></code></pre>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1><strong>2</strong> Aufbau von HTML Seiten</h1>
+
+					<pre><code contenteditable>
+				           +--- HTML-Attribut
+                           |   +--- Wert in Hochkommas
+                           |   |
+&lt;p>ein Text mit einem &lt;a href="…">Link&lt;/a>&lt;/p>
+ |                     |                |  |
+ |                     |                |  +--- schließendes
+ |                     |                |       HTML-Tag mit
+ |                     |                |       Schrägstrich
+ |                     |                |
+ |                     |                +--- schließendes Tag
+ |                     +--- öffnendes Tag
+ +--- öffnendes HTML-Tag</code></pre>
+ 				</section>
+
+ 				<section>
+					<h1><strong>3</strong> Darstellung von HTML-Seiten</h1>
+
+					<img class="fragment" src="images/ohne-markup.png" style="position:absolute;bottom:100px;right:0;z-index:999">
+
+					<pre><code>Hello World!
+Meine erste Webseite.
+Mein Profil</code></pre>
+
+				</section>
+
+
+				 <section>
+					<h1><strong>3</strong> Darstellung von HTML-Seiten</h1>
+
+					<img class="fragment" src="images/grund-markup.png" style="position:absolute;bottom:100px;right:0;z-index:999">
+
+					<pre><code>&lt;!DOCTYPE html>
+&lt;html>
+	&lt;head>
+		&lt;title>Hello World!&lt;/title>
+	&lt;/head>
+	&lt;body>
+		Hello World!
+		Meine erste Webseite.
+		Mein Profil
+	&lt;/body>
+&lt;/html></code></pre>
+
+				</section>
+
+ 				<section>
+					<h1><strong>3</strong> Darstellung von HTML-Seiten</h1>
+
+					<img class="fragment" src="images/volles-markup.png" style="position:absolute;bottom:100px;right:0;z-index:999">
+
+
+					<pre><code>&lt;!DOCTYPE html>
+&lt;html>
+	&lt;head>
+		&lt;title>Hello World!&lt;/title>
+	&lt;/head>
+	&lt;body>
+		&lt;h1>Hello World!&lt;/h1>
+		&lt;p>Meine erste Webseite.&lt;/p>
+		&lt;a href="profil.html">Mein Profil&lt;/a>
+	&lt;/body>
+&lt;/html></code></pre>
+
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail</h1>
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong>// Doctype</strong></h1>
+					<pre class="fragment"><code>&lt;!DOCTYPE html></code></pre>
+					HTML W3C -> HTML5
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong>// Head</strong></h1>
+					<pre class="fragment"><code>&lt;head> &lt;/head></code></pre>
+					Unsichtbar
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong>// Titel</strong></h1>
+					<pre class="fragment"><code>&lt;title> &lt;/title></code></pre>
+					ToDo: Screenshot Browser
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong>// Body</strong></h1>
+					<pre class="fragment"><code>&lt;body> &lt;/body></code></pre>
+					Alles Sichtbare
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong>// Kommentare</strong></h1>
+					<pre class="fragment"><code>&lt;!-- <i>Kommentar</i> --></code></pre>
+					Alles Sichtbare
+				</section>
+
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong class="pink">// Demo</strong></h1>
+				</section>
+
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong>// Überschriften</strong></h1>
+					<pre class="fragment"><code>&lt;h6> &lt;/h6>
+&lt;h1> &lt;/h1></code></pre>
+
+					<div id="headline-test">
+						<h1>Headline 1</h1>
+						<h2>Headline 1</h2>
+						<h3>Headline 1</h3>
+						<h4>Headline 1</h4>
+						<h5>Headline 1</h5>
+						<h6>Headline 1</h6>
+					</div>
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong>// Textabsatz</strong></h1>
+					<pre class="fragment"><code>&lt;p> &lt;/p></code></pre>
+					Absatz
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong>// Zeilenumbruch</strong></h1>
+					<pre class="fragment"><code>&lt;br /></code></pre>
+					Kein End-Tag!
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong class="pink">// Demo</strong></h1>
+				</section>
+
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong>// Textformatierung</strong></h1>
+					<pre class="fragment"><code>&lt;b> &lt;/b> &lt;!-- <i>Fett</i> -->
+
+&lt;strong> &lt;/strong> &lt;!-- <i>Fett</i> -->
+
+&lt;i> &lt;/i> &lt;!-- <i>Kursiv</i> -->
+
+&lt;em> &lt;/em> &lt;!-- <i>Kursiv</i> -->
+
+&lt;small> &lt;/small> &lt;!-- <i>Text kleiner, &lt;big></i> -->
+
+&lt;sub> &lt;/sub> &lt;!-- <i>Text hochstellen, &lt;sup></i> --></code></pre>
+				</section>
+
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong class="pink">// Demo</strong></h1>
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong>// Listen</strong></h1>
+					<pre class="fragment"><code>&lt;ul type="square">   &lt;!-- <i>Ungeordnete Liste</i> -->
+	&lt;li> &lt;/li>
+	&lt;li> &lt;/li>
+&lt;/ul></code></pre>
+
+					<pre class="fragment"><code>&lt;ol type="I">   &lt;!-- <i>Geordnete Liste</i> -->
+	&lt;li> &lt;/li>
+	&lt;li> &lt;/li>
+&lt;/ol></code></pre>
+
+					<pre class="fragment"><code>&lt;dl>   &lt;!-- <i>Defintionsliste</i> -->
+	&lt;dt> &lt;/dt>
+	&lt;dt> &lt;/dt>
+&lt;/dl></code></pre>
+					Verschachtelt Tags
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong class="pink">// Demo</strong></h1>
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong>// Hyperlinks</strong></h1>
+					<pre class="fragment"><code>&lt;a href="https://google.de">Wer suchet, der findet.&lt;/a></code></pre>
+
+					<pre class="fragment"><code>&lt;a href="https://google.de" title="Besuche google.de">Wer suchet, der findet.&lt;/a></code></pre>
+
+
+					<pre class="fragment"><code>&lt;a href="https://google.de" target="_blank">Wer suchet, der findet.&lt;/a></code></pre>
+
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong class="pink">// Demo</strong></h1>
+				</section>
+
+				<section>
+					<h1><strong>5</strong> Inline und Block Elemente</h1>
+
+					<pre class="fragment"><code>&lt;span> Inline Elemente &lt;/span></code></pre>
+
+					<pre class="fragment"><code>&lt;div> Block Element &lt;/div></code></pre>
+
+				</section>
+
+				<section>
+					<h1><strong>6</strong> Training</h1>
+
+					TODO
+
+				</section>
+			</div>
+
+
+
+		</div>
+
+		<script src="../revealjs-template/lib/js/head.min.js"></script>
+		<script src="../revealjs-template/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../revealjs-template/lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs-template/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs-template/lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs-template/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+					{ src: '../revealjs-template/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
