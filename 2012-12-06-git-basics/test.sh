@@ -25,12 +25,13 @@ then
 	git clone ~/wba1-2012-test ~/wba1-2012-test-$1/wba1-2012
 fi
 
+# when this script is final we could create this also in an if ! -f block. But not yet ;-)
 echo clear                       >  ~/wba1-2012-test-$1/git
 echo                             >> ~/wba1-2012-test-$1/git
 echo echo                        >> ~/wba1-2012-test-$1/git
-echo echo \"  \" git \$\*        >> ~/wba1-2012-test-$1/git
+echo echo "\"  git\"" \"\$\@\"   >> ~/wba1-2012-test-$1/git
 echo echo                        >> ~/wba1-2012-test-$1/git
-echo `which git` \$\*            >> ~/wba1-2012-test-$1/git
+echo `which git` \"\$\@\"        >> ~/wba1-2012-test-$1/git
 echo echo                        >> ~/wba1-2012-test-$1/git
 
 chmod a+x ~/wba1-2012-test-$1/git
