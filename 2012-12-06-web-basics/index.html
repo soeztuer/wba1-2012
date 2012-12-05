@@ -6,8 +6,8 @@
 
 		<title>WBA1 - Lehreinheit</title>
 
-		<meta name="description" content="Lehreinheit">
-		<meta name="author" content="Student">
+		<meta name="description" content="WBA-Basics">
+		<meta name="author" content="Volker Schaefer">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -35,14 +35,79 @@
                 margin: 0 15px 0px 0;
                 padding: 10px;
                 text-align: center;
-                width: 8em;
+                width: 230px;
+                
+            }
+            
+            blockquote {
+                width: 96% !important;
+                margin: 0 0 50px 0 !important;
+                padding: 2% !important;
+            }
+            
+            
+            section {
+                'background-color: grey !important;   
+            }
+
+            .fullscreenImage .reveal .slides {
+                height: 100%;
+                left: 0;
+                margin: 0 auto;
+                max-width: 100%;
+                padding: 0;
+                top: 0;
+                width: 100%;
+            }
+    
+            .fullscreenImage .reveal .slides > section {
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: auto 92%;
+                height: 100%;
+                left: 0;
+                margin: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+                
+            .fullscreenImage .reveal .slides > section .bu{
+                background-color: rgba(221, 17,102, 0.8);
+                top: 100px;
+                display: inline-block;
+                color: white;
+                padding: 0 10px 0 100px;
+                position:absolute;
+                    
+            }
+
+            .fullscreenImage .reveal .slides > section .quelle{
+                bottom: 10px;
+                color: white;
+                display: inline-block;
+                font-size: 14px;
+                margin: 0 0 0 10px;
+                position:absolute;
+                    
+            }
+            
+            .fullscreenImage .reveal .slides > section p{
+                margin: 0;
+            }
+            
+            .nobackground .reveal .slides > section{
+                background-image: none;
+            }
+            
+
+    
+            .whiteBackground .state-background {
+                background-color: white;
                 
             }
             
             
-            .nobackground {
-                background-image: none !important;
-            }
         </style>
 
 		<!--[if lt IE 9]>
@@ -61,10 +126,12 @@
 					<h1>WBA1 - Web-Basics</h1>
 					<h2>Medieninformatik</h2>
 					<p>06. Dezember 2012</p>
+                    <br />
 					<p>
 						Studiengang Medieninformatik an der Fachhochschule Köln<br/>
 						Campus Gummersbach
 					</p>
+                    <br />
 					<p>
 						Prof. Christian Noss<br />
 						<a href="http://github.com/cnoss">http://github.com/cnoss</a>
@@ -75,21 +142,18 @@
                         Modulziele
                     </h2>
                     <ul>
-                        <li>Auseinandersetzung mit neuen Technologien</li>
-                        <li>technischen Grundlagen des WWW sowie die wesentlichen Meilensteine bei der Entstehung desselben kennen</li>
-                        <li>Web-basierte Anwendungen beurteilen sowie deren Vor- und Nachteile im Vergleich mit anderen Medien argumentieren können</li>
-                        <li>Grundlegende Konzepte und Technologien des WWW verstehen und angewenden können</li>
-                        <li>Eigene Projekte unter Einsatz von (X)HTML, XML, CSS und Javascript konzipieren und realisieren können.</li>
+                        <li class="fragment">technischen Grundlagen des WWW sowie die wesentlichen Meilensteine bei der Entstehung desselben kennen</li>
+                        <li class="fragment">Web-basierte Anwendungen beurteilen sowie deren Vor- und Nachteile im Vergleich mit anderen Medien argumentieren können</li>
+                        <li class="fragment">Grundlegende Konzepte und Technologien des WWW verstehen und anwenden können</li>
+                        <li class="fragment">Eigene Projekte unter Einsatz von (X)HTML, XML, CSS und Javascript konzipieren und realisieren können.</li>
+                        <li class="fragment">Auseinandersetzung mit neuen Technologien</li>
                     </ul>
                 </section>
-                <section class="nobackground">
-                    <figure>
-                        <img src="images/TimBernersLee.jpg" alt="Foto von Tim Berners Lee"/>
-                        <figcaption>
-                            Tim Berners-Lee, Gründer des <strong>W3C</strong><br /> 
-                            <small>Quelle: <a href="http://www.edht.org.uk">http://www.edht.org.uk</a> (03.12.2012)</small>
-                        </figcaption>
-                    </figure>
+                <section data-state="fullscreenImage"  style="background-image: url(images/TimBernersLee.jpg)">
+                    <p class="bu fragment">
+                        Tim Berners-Lee, Gründer des W3C 
+                    </p>
+                    <p class="quelle">Quelle: <a href="http://www.edht.org.uk">http://www.edht.org.uk</a> (03.12.2012)</p>
                 </section>
                 <section>
                     <blockquote>
@@ -99,18 +163,22 @@
                     <blockquote>
                         Computer können genutzt werden, um im Hintergrund Aufgaben zu erledigen, damit Gruppen besser zusammenarbeiten können.
                     </blockquote>
-                    <small>Quelle: Berners-Lee, Tim: Weaving the Weg, 1. Aufl., HarperOne, 1999</small>
+                    <p>
+                        <small>Quelle: Berners-Lee, Tim: Weaving the Weg, 1. Aufl., HarperOne, 1999</small>
+                    </p>
                 </section>
                 <section>
                     <blockquote>
-                        Jeder Bereich des Internets sollte eher eine Netzstruktur als eine Baumstruktur haben. Er
-                        wähnenswerte Ausnahmen sind das Domain Name System und die Regeln für die Vergabe von Domainnamen durch die ICANN.
+                        Jeder Bereich des Internets sollte eher eine Netzstruktur als eine Baumstruktur haben. Erwähnenswerte 
+                        Ausnahmen sind das Domain Name System und die Regeln für die Vergabe von Domainnamen durch die ICANN.
                     </blockquote>
                     <br />
                     <blockquote>
                         Informatiker tragen nicht nur eine technische, sondern auch eine moralische Verantwortung.
                     </blockquote>
-                    <small>Quelle: Berners-Lee, Tim: Weaving the Weg, 1. Aufl., HarperOne, 1999</small>
+                    <p>
+                        <small>Quelle: Berners-Lee, Tim: Weaving the Weg, 1. Aufl., HarperOne, 1999</small>
+                    </p>
 
                 </section>
 
@@ -197,29 +265,24 @@
                         <li>video/mpeg</li>
                     </ul>
                 </section>
-                <section class="nobackground">
-                    <figure>
-                        <img style="height: 90%" src="images/roussel_lesemaschine.jpg" alt="Roussels Lesemaschine" />
-                        <figcaption>Roussels Lesemaschine<br />
-                                <small>Quelle: <a href="http://www.khm.de/~flw/lexikon/25.html">http://www.khm.de/~flw/lexikon/25.html</a> (04.12.2012)</small>
-                        </figcaption>
-                    </figure>
+                <section data-state="whiteBackground fullscreenImage" style="background-image: url(images/roussel_lesemaschine.jpg)">
+                            <p class="bu">Roussels Lesemaschine</p>
+                            <p class="quelle" style="color: black">
+                               Quelle: <a href="http://www.khm.de/~flw/lexikon/25.html">http://www.khm.de/~flw/lexikon/25.html</a> (04.12.2012)
+                            </p>
                 </section>
-                <section class="nobackground">
-                    <figure>
-                        <img style="height: 90%" src="images/buecherrad_ramelli.jpg" alt="Buecherrad von Ramelli" />
-                        <figcaption>Buecherrad von Agostino Ramelli (16. Jahrhundert)<br />
-                                <small>Quelle: <a href="http://de.wikipedia.org/wiki/Ramellis_Bücherrad">http://de.wikipedia.org/wiki/Ramellis_Bücherrad</a> (04.12.2012)</small>
-                        </figcaption>
-                    </figure>
+                <section data-state="fullscreenImage" style="background-image: url(images/buecherrad_ramelli.jpg)" >
+                            <p class="bu">Buecherrad von Agostino Ramelli (16. Jahrhundert)</p>
+                            <p class="quelle">
+                               Quelle: <a href="http://de.wikipedia.org/wiki/Ramellis_Bücherrad">http://de.wikipedia.org/wiki/Ramellis_Bücherrad</a> (04.12.2012)
+                            </p>
                 </section>
-                <section class="nobackground">
-                    <figure>
-                        <img style="height: 90%" src="images/erste_website.png" alt="Buecherrad von Ramelli" />
-                        <figcaption>Die erste Website, verfasst und veröffentlicht von Tim Berners-Lee am 13. November 1990 auf einem NeXT-Rechner<br />
-                                <small>Quelle: <a href="http://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html">http://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html</a> (04.12.2012)</small>
-                        </figcaption>
-                    </figure>
+                <section data-state="fullscreenImage" style="background-image: url(images/erste_website.png)" >
+                    <p class="bu fragment" style="width: 720px;">Die erste Website, verfasst und veröffentlicht von Tim Berners-Lee am 13. November 1990 auf einem NeXT-Rechner</p>
+                    <p class="quelle">
+                        Quelle: <a href="http://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html">http://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html</a> (04.12.2012)
+                    </p>
+         
                 </section>
                 <section>
                     <h2>
@@ -244,16 +307,18 @@
                         wie Texten, Bildern und Hyperlinks in Dokumenten. HTML-Dokumente sind die Grundlage 
                         des World Wide Web und werden von einem Webbrowser dargestellt.
                     </blockquote>
-                    <small>Quelle: <a href="http://de.wikipedia.org/wiki/Hypertext_Markup_Language">http://de.wikipedia.org/wiki/Hypertext_Markup_Language</a> (04.12.2012)</small>
+                    <p>
+                        <small>Quelle: <a href="http://de.wikipedia.org/wiki/Hypertext_Markup_Language">http://de.wikipedia.org/wiki/Hypertext_Markup_Language</a> (04.12.2012)</small>
+                    </p>
 
                 </section>
-                <section class="nobackground">
+                <section data-state="nobackground">
                     <div style="text-align: center">
                         
                         <embed type="image/svg+xml" src="images/sgml.svg"/>
-                        <embed style="position:absolute; top: 16px; left: 285px" class="fragment" type="image/svg+xml" src="images/xml.svg"/>
-                        <embed style="margin-top:-10px" class="fragment" type="image/svg+xml" src="images/dtd.svg"/>
-                        <embed  style="margin-top:-10px" class="fragment" type="image/svg+xml" src="images/auszeichnungssprachen.svg"/>
+                        <embed style="position:absolute; top: 16px; left: 285px"type="image/svg+xml" src="images/xml.svg"/>
+                        <embed style="margin-top:-10px" type="image/svg+xml" src="images/dtd.svg"/>
+                        <embed  style="margin-top:-10px" type="image/svg+xml" src="images/auszeichnungssprachen.svg"/>
                     </div>
 
                 </section>
@@ -296,11 +361,11 @@
                     </h2>
                     <ul class="kaestchen">
                         <li class="fragment">World Wide Web</li>
-                        <li class="fragment">E-Mail</li>
+                        <li class="fragment">Pinterest</li>
                         <li class="fragment">Skype</li>
                         <li class="fragment">Twitter</li>
                         <li class="fragment">ICQ</li>
-                        <li class="fragment">Google</li>
+                        <li class="fragment">Instagram</li>
                         <li class="fragment">Facebook</li>
                         <li class="fragment">Flickr</li>
                         <li class="fragment">YouTube</li>
@@ -337,6 +402,24 @@
                             <li>Interaktivität/Geschwindgkeit</li>
                         </ul>
                     </div>
+                </section>
+                <section data-state="fullscreenImage" style="background-image: url(images/bill_gates.jpg)">
+                    <blockquote style= "max-width: 400px; position: absolute; top: 80px; left: 100px;">
+                        Das Internet ist nur ein Hype
+                    </blockquote>
+                    <p class="quelle">
+                        Quelle: <a href="http://www.thirdage.com">http://www.thirdage.com</a> (04.12.2012)
+
+                    </p>
+                </section>
+                <section>
+                    <h2>Bewertungskriterien</h2>
+                    <ul>
+                        <li class="fragment">Vortrag</li>
+                        <li class="fragment">Training</li>
+                        <li class="fragment">Dokumentation</li>
+                        <li class="fragment">Klausuraufgaben</li>
+                    </ul>
                 </section>
 			</div>
 
