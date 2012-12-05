@@ -17,7 +17,7 @@ then
 
 	# Ensure we do not push this later!
 	cd ~/wba1-2012-test
-	git remote remove origin
+	git remote rm origin
 fi
 
 if [ ! -d ~/wba1-2012-test-$1/wba1-2012 ]
