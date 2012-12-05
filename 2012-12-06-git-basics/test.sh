@@ -5,14 +5,11 @@ then
 	exit -1
 fi
 
-clear
-echo
-echo Fake git repo wba1-2012 for user $1
-echo
-
 if [ ! -d ~/wba1-2012-test ]
 then
+	echo
 	echo CLONE ORIGINAL wba1-2012 to ~/wba1-2012-test
+	echo
 	git clone --bare https://github.com/fh-koeln/wba1-2012 ~/wba1-2012-test
 
 	# Ensure we do not push this later!
@@ -22,7 +19,9 @@ fi
 
 if [ ! -d ~/wba1-2012-test-$1/wba1-2012 ]
 then
+	echo
 	echo CLONE ~/wba1-2012-test to ~/wba1-2012-test-$1/wba1-2012
+	echo
 	git clone ~/wba1-2012-test ~/wba1-2012-test-$1/wba1-2012
 fi
 
@@ -35,6 +34,11 @@ echo `which git` \$\*            >> ~/wba1-2012-test-$1/git
 echo echo                        >> ~/wba1-2012-test-$1/git
 
 chmod a+x ~/wba1-2012-test-$1/git
+
+clear
+echo
+echo Fake git repo wba1-2012 for user $1
+echo
 
 cd ~/wba1-2012-test-$1/wba1-2012
 
