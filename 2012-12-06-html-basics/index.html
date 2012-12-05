@@ -61,6 +61,10 @@
 				-o-tab-size:   4;
 				tab-size:      4;
 			}
+			.reveal pre.smart-tag {
+				text-align: center;
+				font-size: 1em;
+			}
 		</style>
 	</head>
 
@@ -80,10 +84,9 @@
 						Campus Gummersbach
 					</p>
 
-					<br/>
-					<p>
-						Dominik Schilling <a href="http://github.com/ocean90">github</a><br/>
-						Bruno José Carvalho Gonzaga <a href="http://github.com/jogabonito">github</a>
+					<p style="margin-top: 100px">
+						Dominik Schilling <a href="http://github.com/ocean90" target="_blank">github</a><br/>
+						Bruno José Carvalho Gonzaga <a href="http://github.com/jogabonito" target="_blank">github</a>
 					</p>
 				</section>
 
@@ -126,14 +129,14 @@
 
 					<ul>
 						<li class="fragment">Textdokument mit Endung .html oder .htm</li>
-						<li class="fragment">Tag
+						<li class="fragment">Tags
 						<pre><code contenteditable>&lt;tagname> &lt;/tagname></code></pre>
 						</li>
-						<li class="fragment">Attribut
+						<li class="fragment">Attribute
 						<pre><code contenteditable>&lt;tagname attributename="wert"></code></pre>
 						</li>
-						<li class="fragment">HTML Element
-						<pre><code contenteditable>&lt;tagname> text &lt;/tagname></code></pre>
+						<li class="fragment">HTML Elemente
+						<pre><code contenteditable>&lt;tagname> Text &lt;/tagname></code></pre>
 						</li>
 					</ul>
 				</section>
@@ -141,19 +144,19 @@
 				<section>
 					<h1><strong>2</strong> Aufbau von HTML Seiten</h1>
 
-					<pre><code contenteditable>
+					<pre><code>
 				           +--- HTML-Attribut
-                           |   +--- Wert in Hochkommas
+                           |   +--- Wert
                            |   |
-&lt;p>ein Text mit einem &lt;a href="…">Link&lt;/a>&lt;/p>
+&lt;p>Ein Text mit einem &lt;a href="…">Link&lt;/a>&lt;/p>
  |                     |                |  |
  |                     |                |  +--- schließendes
- |                     |                |       HTML-Tag mit
+ |                     |                |       Tag mit
  |                     |                |       Schrägstrich
  |                     |                |
  |                     |                +--- schließendes Tag
  |                     +--- öffnendes Tag
- +--- öffnendes HTML-Tag</code></pre>
+ +--- öffnendes Tag</code></pre>
  				</section>
 
  				<section>
@@ -164,9 +167,7 @@
 					<pre><code>Hello World!
 Meine erste Webseite.
 Mein Profil</code></pre>
-
 				</section>
-
 
 				 <section>
 					<h1><strong>3</strong> Darstellung von HTML-Seiten</h1>
@@ -184,7 +185,6 @@ Mein Profil</code></pre>
 		Mein Profil
 	&lt;/body>
 &lt;/html></code></pre>
-
 				</section>
 
  				<section>
@@ -207,76 +207,83 @@ Mein Profil</code></pre>
 
 				</section>
 
-				<section>
+				<section data-state="tag-cloud-hide">
 					<h1><strong>4</strong> HTML Tags im Detail</h1>
+
+					<div id="tag-cloud" style="margin-top:100px">
+					<span>a</span> abbr acronym address area article aside <span>b</span> <span>big</span> blockquote span <span>br</span> button caption center cite code col colgroup del <span>dd</span> details <span>div</span> <span>dl</span> <span>dt</span> <span>em</span> fieldset figure figcaption font footer form <span>h1 h2 h3 h4 h5 h6</span> header hgroup hr <span>i</span> iframe img ins input kbd label legend <span>li</span> map menu meta nav noscript object option <span>p</span> param pre q s samp script span section select small strike <span>strong</span> style <span>sub</span> summary <span>sup</span> table tbody td textarea tfoot th thead <span>title</span> tr tt <span>u ul ol</span> var
+					</div>
+
 				</section>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Doctype</strong></h1>
 
-					<p class="fragment">Versionsabhängig<br/>
-						HTML 4:</p>
+					<p class="fragment">Je HTML Version ein Doctype.<br/>Beispiel: HTML 4</p>
+
 					<pre class="fragment"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
        "http://www.w3.org/TR/html4/loose.dtd"></code></pre>
-       				<br/>
-       				<p class="fragment">Wir werden uns aber auf <span class="pink">HTML5</span> einigen</p>
 
-					<pre class="fragment"><code>&lt;!DOCTYPE html></code></pre>
+       				<p style="margin-top:50px" class="fragment">Wir werden aber auf den <span class="pink">HTML 5</span> Doctype setzen</p>
+					<pre class="fragment smart-tag"><code>&lt;!DOCTYPE html></code></pre>
+					<p class="fragment"> Kann man sich merken, oder? </p>
 				</section>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// HTML</strong></h1>
-					<pre class="fragment"><code>&lt;html> &lt;/html></code></pre>
-					<ul class="fragment">
-						<li>Es ist ein HTML Dokument</li>
+					<pre class="fragment smart-tag"><code>&lt;html> &lt;/html></code></pre>
+					<ul style="margin-top:20px"  class="fragment">
+						<li>Die Wurzel des HTML-Dokuments</li>
+						<li>Bestimmt Anfang und Ende</li>
 					</ul>
 				</section>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Head</strong></h1>
-					<pre class="fragment"><code>&lt;head> &lt;/head></code></pre>
-					<ul class="fragment">
-						<li>Ist für den Nutzer Unsichtbar</li>
-						<li>Ort für zusätzliche Informationen</li>
+					<pre class="fragment smart-tag"><code>&lt;head> &lt;/head></code></pre>
+					<ul style="margin-top:20px" class="fragment">
+						<li>Container für zusätzliche Informationen (Metadaten)</li>
+						<li>Für den Nutzer meist unsichtbar</li>
 					</ul>
 				</section>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Titel</strong></h1>
-					<pre class="fragment"><code>&lt;title> &lt;/title></code></pre>
-					<img class="fragment" src="images/title.png" style="display:block;margin:0 auto">
+					<pre class="fragment smart-tag"><code>&lt;title> Lorem ipsum &lt;/title></code></pre>
+					<img class="fragment" src="images/title.png" style="display:block;margin:-20px auto 0">
 				</section>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Body</strong></h1>
-					<pre class="fragment"><code>&lt;body> &lt;/body></code></pre>
-					<ul class="fragment">
-						<li>Der sichtbare Bereich für den Nutzer</li>
-						<li>Hier wird der eigentliche Inhalt eingetragen</li>
+					<pre class="fragment smart-tag"><code>&lt;body> &lt;/body></code></pre>
+					<ul style="margin-top:20px" class="fragment">
+						<li>Container für den anzeigbaren Inhalt des HTML-Dokuments</li>
 					</ul>
 				</section>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Kommentare</strong></h1>
-					<pre class="fragment"><code>&lt;!-- <i>Kommentar</i> --></code></pre>
+					<pre class="fragment smart-tag"><code>&lt;!-- <i>Kommentar</i> --></code></pre>
 					<ul class="fragment">
 						<li>Erklärt sich von selbst, oder?</li>
 					</ul>
 				</section>
 
-
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong class="pink">// Demo</strong></h1>
 				</section>
 
-
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Überschriften</strong></h1>
-					<pre class="fragment"><code>&lt;h1> &lt;/h1>
-&lt;h6> &lt;/h6></code></pre>
+					<pre class="fragment smart-tag"><code>&lt;h1> Lorem ipsum &lt;/h1>
+&lt;h6> Lorem ipsum &lt;/h6></code></pre>
+
+					<ul class="fragment">
+						<li>h1 = groß</li>
+						<li>h6 = klein</li>
+					</ul>
 
 					<div class="fragment" id="headline-test">
-						<p>H1 ist das größte, H6 das kleinste:</p>
 						<h1>Headline 1</h1>
 						<h2>Headline 1</h2>
 						<h3>Headline 1</h3>
@@ -288,14 +295,21 @@ Mein Profil</code></pre>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Textabsatz</strong></h1>
-					<pre class="fragment"><code>&lt;p> &lt;/p></code></pre>
-					<p>Stellt einen Absatz für einen Text dar</p>
+					<pre class="fragment smart-tag"><code>&lt;p> Lorem ipsum dolor sit amet,… &lt;/p></code></pre>
+
+					<ul style="margin-top:20px" class="fragment">
+						<li>Erstellt einen Absatz für einen Text</li>
+					</ul>
 				</section>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Zeilenumbruch</strong></h1>
-					<pre class="fragment"><code>&lt;br /></code></pre>
-					Kein End-Tag!
+					<pre class="fragment smart-tag"><code>&lt;br /></code></pre>
+
+					<ul style="margin-top:20px">
+						<li class="fragment">Erzwingt einen Zeilenumbruch</li>
+						<li class="fragment">Hat keinen schließenden Tag, schließt sich selbst!</li>
+					</ul>
 				</section>
 
 				<section>
@@ -305,7 +319,7 @@ Mein Profil</code></pre>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Textformatierung</strong></h1>
-					<pre class="fragment"><code>&lt;b> &lt;/b> &lt;!-- <i>Fett</i> -->
+					<pre class="fragment smart-tag" style="font-size:0.8em"><code>&lt;b> &lt;/b> &lt;!-- <i>Fett</i> -->
 
 &lt;strong> &lt;/strong> &lt;!-- <i>Fett</i> -->
 
@@ -313,7 +327,7 @@ Mein Profil</code></pre>
 
 &lt;em> &lt;/em> &lt;!-- <i>Kursiv</i> -->
 
-&lt;small> &lt;/small> &lt;!-- <i>Text kleiner, &lt;big></i> -->
+&lt;small> &lt;/small> &lt;!-- <i>Schriftgröße veringern, &lt;big></i> -->
 
 &lt;sub> &lt;/sub> &lt;!-- <i>Text hochstellen, &lt;sup></i> --></code></pre>
 				</section>
@@ -325,21 +339,39 @@ Mein Profil</code></pre>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Listen</strong></h1>
-					<pre class="fragment"><code>&lt;ul type="square">   &lt;!-- <i>Ungeordnete Liste</i> -->
-	&lt;li> &lt;/li>
-	&lt;li> &lt;/li>
+					<pre class="fragment smart-tag" style="text-align:left"><code class="">&lt;ul type="square">
+	&lt;li> Lorem ipsum &lt;/li>
+	&lt;li> Lorem ipsum &lt;/li>
 &lt;/ul></code></pre>
 
-					<pre class="fragment"><code>&lt;ol type="I">   &lt;!-- <i>Geordnete Liste</i> -->
-	&lt;li> &lt;/li>
-	&lt;li> &lt;/li>
+					<ul style="margin-top:20px" class="fragment">
+						<li>Ungeordnete Liste</li>
+						<li>Attribut <i>type</i> ändert das Auflistungszeichen</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong>// Listen</strong></h1>
+					<pre class="fragment smart-tag" style="text-align:left"><code>&lt;ol type="I">
+	&lt;li> Lorem ipsum &lt;/li>
+	&lt;li> Lorem ipsum &lt;/li>
 &lt;/ol></code></pre>
 
-					<pre class="fragment"><code>&lt;dl>   &lt;!-- <i>Defintionsliste</i> -->
-	&lt;dt> &lt;/dt>
-	&lt;dd> &lt;/dd>
+					<ul style="margin-top:20px" class="fragment">
+						<li>Geordnete Liste</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong>// Listen</strong></h1>
+					<pre class="fragment smart-tag" style="text-align:left"><code>&lt;dl>
+	&lt;dt> Titel &lt;/dt>
+	&lt;dd> Definition &lt;/dd>
 &lt;/dl></code></pre>
-					Verschachtelt Tags
+
+					<ul style="margin-top:20px" class="fragment">
+						<li>Definitionsliste</li>
+					</ul>
 				</section>
 
 				<section>
@@ -348,13 +380,13 @@ Mein Profil</code></pre>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Hyperlinks</strong></h1>
-					<pre class="fragment"><code>&lt;a href="https://google.de">Wer suchet, der findet.&lt;/a></code></pre>
+					<pre class="fragment smart-tag"><code>&lt;a href="https://google.de"> Google &lt;/a></code></pre>
 
-					<pre class="fragment"><code>&lt;a href="https://google.de" title="Besuche google.de">Wer suchet, der findet.&lt;/a></code></pre>
+					<pre class="fragment smart-tag" style="font-size:0.75em"><code>&lt;a href="seite.html" title="Besuche mich"> Seite &lt;/a></code></pre>
 
+					<pre class="fragment smart-tag" style="font-size:0.8em"><code>&lt;a href="#anker"> Zum Inhalt springen &lt;/a></code></pre>
 
-					<pre class="fragment"><code>&lt;a href="https://google.de" target="_blank">Wer suchet, der findet.&lt;/a></code></pre>
-
+					<pre class="fragment smart-tag" style="font-size:0.8em"><code>&lt;a name="anker"> Inhalt &lt;/a></code></pre>
 				</section>
 
 				<section>
@@ -364,21 +396,37 @@ Mein Profil</code></pre>
 				<section>
 					<h1><strong>5</strong> Inline und Block Elemente</h1>
 
-					<pre class="fragment"><code>&lt;span> Inline Elemente &lt;/span></code></pre>
+					<div>
+						<div style="width:48%;float:left">
+							<h3>Block Elemente</h3>
 
-					<pre class="fragment"><code>&lt;div> Block Element &lt;/div></code></pre>
+							<ul>
+								<li>Erzeugen eine neue Zeile</li>
+								<li>Können Text, Inline- & weitere Block Elemente beinhalten</li>
+								<li>Beispiele: h1-h6, p, div</li>
+							</ul>
+						</div>
+						<div style="width:48%;float:right;border-left:1px solid #d16;padding-left:15px">
+							<h3>Inline Elemente</h3>
 
+							<ul>
+								<li>Erzeugen keine neue Zeile und sind nebeneinander angeordnet</li>
+								<li>Können nur Text und weitere Inline-Elemente beinhalten</li>
+								<li>Beispiele: a, strong, em, span</li>
+							</ul>
+						</div>
+						<div style="clear:both"></div>
+					</div>
 				</section>
 
 				<section>
 					<h1><strong>6</strong> Training</h1>
 
-					TODO
+					<p>Öffne folgenden Link in deinem Browser und erweitere das Textdokument zu einem HTML-Dokument. <br /> Verwende dafür die heute vorgestellten HTML-Tags.</p>
 
+					<pre class="smart-tag" style="margin-top: 100px" >http://bit.ly/wba1-html</pre>
 				</section>
 			</div>
-
-
 
 		</div>
 
@@ -408,6 +456,22 @@ Mein Profil</code></pre>
 					{ src: '../revealjs-template/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
 				]
 			});
+
+			Reveal.addEventListener( 'tag-cloud-hide', function() {
+
+				setTimeout( function() {
+						var div = document.getElementById( 'tag-cloud' ),
+							items = div.getElementsByTagName( 'span' ),
+							item;
+
+						div.style.color = "#535353";
+
+						for (var i = 0; i < items.length; i++) {
+						    items[i].className = 'pink';
+						}
+					}, 5000 );
+
+			}, false );
 
 		</script>
 
