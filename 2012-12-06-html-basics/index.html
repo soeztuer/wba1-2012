@@ -125,6 +125,7 @@
 					<h1><strong>2</strong> Aufbau von HTML Seiten</h1>
 
 					<ul>
+						<li class="fragment">Textdokument mit Endung .html oder .htm</li>
 						<li class="fragment">Tag
 						<pre><code contenteditable>&lt;tagname> &lt;/tagname></code></pre>
 						</li>
@@ -212,32 +213,55 @@ Mein Profil</code></pre>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Doctype</strong></h1>
+
+					<p class="fragment">Versionsabhängig<br/>
+						HTML 4:</p>
+					<pre class="fragment"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+       "http://www.w3.org/TR/html4/loose.dtd"></code></pre>
+       				<br/>
+       				<p class="fragment">Wir werden uns aber auf <span class="pink">HTML5</span> einigen</p>
+
 					<pre class="fragment"><code>&lt;!DOCTYPE html></code></pre>
-					HTML W3C -> HTML5
+				</section>
+
+				<section>
+					<h1><strong>4</strong> HTML Tags im Detail <strong>// HTML</strong></h1>
+					<pre class="fragment"><code>&lt;html> &lt;/html></code></pre>
+					<ul class="fragment">
+						<li>Es ist ein HTML Dokument</li>
+					</ul>
 				</section>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Head</strong></h1>
 					<pre class="fragment"><code>&lt;head> &lt;/head></code></pre>
-					Unsichtbar
+					<ul class="fragment">
+						<li>Ist für den Nutzer Unsichtbar</li>
+						<li>Ort für zusätzliche Informationen</li>
+					</ul>
 				</section>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Titel</strong></h1>
 					<pre class="fragment"><code>&lt;title> &lt;/title></code></pre>
-					ToDo: Screenshot Browser
+					<img class="fragment" src="images/title.png" style="display:block;margin:0 auto">
 				</section>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Body</strong></h1>
 					<pre class="fragment"><code>&lt;body> &lt;/body></code></pre>
-					Alles Sichtbare
+					<ul class="fragment">
+						<li>Der sichtbare Bereich für den Nutzer</li>
+						<li>Hier wird der eigentliche Inhalt eingetragen</li>
+					</ul>
 				</section>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Kommentare</strong></h1>
 					<pre class="fragment"><code>&lt;!-- <i>Kommentar</i> --></code></pre>
-					Alles Sichtbare
+					<ul class="fragment">
+						<li>Erklärt sich von selbst, oder?</li>
+					</ul>
 				</section>
 
 
@@ -248,10 +272,11 @@ Mein Profil</code></pre>
 
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Überschriften</strong></h1>
-					<pre class="fragment"><code>&lt;h6> &lt;/h6>
-&lt;h1> &lt;/h1></code></pre>
+					<pre class="fragment"><code>&lt;h1> &lt;/h1>
+&lt;h6> &lt;/h6></code></pre>
 
-					<div id="headline-test">
+					<div class="fragment" id="headline-test">
+						<p>H1 ist das größte, H6 das kleinste:</p>
 						<h1>Headline 1</h1>
 						<h2>Headline 1</h2>
 						<h3>Headline 1</h3>
@@ -264,7 +289,7 @@ Mein Profil</code></pre>
 				<section>
 					<h1><strong>4</strong> HTML Tags im Detail <strong>// Textabsatz</strong></h1>
 					<pre class="fragment"><code>&lt;p> &lt;/p></code></pre>
-					Absatz
+					<p>Stellt einen Absatz für einen Text dar</p>
 				</section>
 
 				<section>
@@ -312,7 +337,7 @@ Mein Profil</code></pre>
 
 					<pre class="fragment"><code>&lt;dl>   &lt;!-- <i>Defintionsliste</i> -->
 	&lt;dt> &lt;/dt>
-	&lt;dt> &lt;/dt>
+	&lt;dd> &lt;/dd>
 &lt;/dl></code></pre>
 					Verschachtelt Tags
 				</section>
