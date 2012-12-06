@@ -22,9 +22,14 @@
 		<style type="text/css">
 			.home{
 				position:fixed;
-				top:10px;
+				bottom:-100px;
 				left:10px;
 			}
+                        .anchorfix{
+                            float:right;
+                            clear: right;
+                        }
+                      
 		</style>
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
@@ -47,10 +52,17 @@
 					<h1>Interfaces</h1>
 					<p>&nbsp;</p><br />
 					<center><small>Oliver van der B&uuml;rie</small></center>
-					<center><small>Derya &Ouml;zg&uuml;l</small></center>
+					<center><small>Derya Erg&uuml;l</small></center>
 				</section>
 				<section>
-					<h2>Topics</h2>
+                                    <div>
+                                        <h2>Topics</h2>
+                                        <small class="anchorfix">
+                                            <small>
+                                                <a href="http://w3c.org">http://w3c.org</a>
+                                            </small>
+                                        </small>
+                                    </div>
 					<ul>
 						<li class="fragment"><a href="#/2">HTTP</a>
 							<ul>
@@ -135,10 +147,30 @@ $.get(blub);
                                         </section>
                                         <section>
                                             <h4><a href="#/2">GET</a></h4>
-                                            Response
+                                            <p>Response</p>
                                         </section>
 					<section>
                                             <h4><a href="#/2">POST</a></h4>
+                                            <ul>
+						<li class="fragment">Vorteile
+                                                    <ul>
+                                                        <li class="fragment">bliblablub</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="fragment">Nachteile
+                                                    <ul>
+                                                        <li class="fragment">viele</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+					</section>
+                                        <section>
+                                            <h4><a href="#/2">POST</a></h4>
+                                            <p>Beispiel</p>
+					</section>
+                                        <section>
+                                            <h4><a href="#/2">POST</a></h4>
+                                            <p>Response</p>
 					</section>
 					<section>
                                             <h4><a href="#/2">HEAD</a></h4>
@@ -167,17 +199,34 @@ $.get(blub);
 							<span class="pink">N</span>otation
 						</p>
 					</section>
+                                        <section>
+                                            <h4><a href="#/3">Was ist JSON?</a></h4>
+                                            Die Javascript Object Notation ist im Grunde genommen nichts weiteres als ein assoziatives Array.<br>
+                                            Also quasi ein ein Array aus Key => Value Paaren. Dieses Array kann allerdings von Javascript<br>
+                                            als Object interpretiert werden.
+					</section>
+                                        <section>
+                                            <h4><a href="#/3">Bestandteile JSON String</a></h4>
+                                            Um einen JSON String zu erstellen reicht eine Variable Deklaration in Javascript aus.
+                                            <code>var x = {};</code>
+                                            
+					</section>
 					<section>
-                                            <h4><a href="#/3">Object in JS</a></h4>
+                                            <h4><a href="#/3">Erstellen von JSON</a></h4>
+                                            Um einen JSON String zu erstellen reicht eine Variable Deklaration in Javascript aus.
+                                            <code>var x = {};</code>
+                                            
 					</section>
 					<section>
                                             <h4><a href="#/3">Typisierung</a></h4>
+                                            Key = ""
+                                            Value = Number,String, Array, Object
 					</section>
 					<section>
                                             <h4><a href="#/3">Validit&auml;t</a></h4>
 					</section>
 					<section>
-                                            <h4><a href="#/3">Erstellen JSON</a></h4>
+                                            <h4><a href="#/3">JSON Header</a></h4>
 					</section>
 				</section>
 				<section>
@@ -190,13 +239,13 @@ $.get(blub);
 						</p>
 					</section>
 					<section>
-					Meaning
+                                            <h4><a href="#/4">Meaning</a></h4>
 					</section>
 					<section>
-					get/post
+                                            <h4><a href="#/4">get/post</a></h4>
 					</section>
 					<section>
-					Response
+                                            <h4><a href="#/4">Response</a></h4>
 					</section>
 				</section>
 				<section>
@@ -210,13 +259,13 @@ $.get(blub);
 						</p>
 					</section>
 					<section>
-					Syntax
+                                            <h4><a href="#/5">Syntax</a></h4>
 					</section>
 					<section>
-					Envelope
+                                            <h4><a href="#/5">Envelope</a></h4>
 					</section>
 					<section>
-					Access
+                                            <h4><a href="#/5">Access</a></h4>
 					</section>
 				</section>
 				<section>
@@ -229,19 +278,19 @@ $.get(blub);
 						</p>
 					</section>
 					<section>
-					Beschreibung / History / SGML
+                                            <h4><a href="#/6">Beschreibung / History / SGML</a></h4>
 					</section>
 					<section>
-					Aufbau
+                                            <h4><a href="#/6">Aufbau</a></h4>
 					</section>
 					<section>
-					Datum
+                                            <h4><a href="#/6">Datum</a></h4>
 					</section>
 					<section>
-					Content
+                                            <h4><a href="#/6">Content</a></h4>
 					</section>
 					<section>
-					Style / XLS
+                                            <h4><a href="#/6">Style / XLS</a></h4>
 					</section>
 				</section>
 				<section>
@@ -279,7 +328,7 @@ $.get(blub);
 				<div class="home">
 					<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
 						<a xlink:href="#">
-							<circle cx="20" cy="20" r="20" stroke="black" stroke-width="2" fill="#77CC00" style="opacity:0.7"/>
+							<circle cx="20" cy="20" r="20" fill="#77CC00" style="opacity:0.7"/>
 							<polygon points="5,20,30,10,30,30" style="fill:#DD1166" />
 						</a>
 					</svg>
